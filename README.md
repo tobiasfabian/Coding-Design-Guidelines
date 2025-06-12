@@ -1,4 +1,4 @@
-# Design Guidlines
+# Design Guidelines
 Version 1.3.0
 
 ## Table of Contents
