@@ -1,8 +1,8 @@
 .a-text {
-	--font-size: var(--font-size-paragraphs-medium);
-	--line-height: var(--line-height-paragraphs-medium);
+	--font-size: var(--font-size-paragraph-medium);
+	--line-height: var(--line-height-paragraph-medium);
 
-	font: var(--font-paragraphs-medium);
+	font: var(--font-paragraph-medium);
 
 	> h1 {
 		font: var(--font-heading-xxlarge);
@@ -28,22 +28,22 @@
 	}
 
 	&[data-size="large"] {
-		--font-size: var(--font-size-paragraphs-large);
-		--line-height: var(--line-height-paragraphs-large);
+		--font-size: var(--font-size-paragraph-large);
+		--line-height: var(--line-height-paragraph-large);
 
-		font: var(--font-paragraphs-large);
+		font: var(--font-paragraph-large);
 	}
 	&[data-size="small"] {
-		--font-size: var(--font-size-paragraphs-small);
-		--line-height: var(--line-height-paragraphs-small);
+		--font-size: var(--font-size-paragraph-small);
+		--line-height: var(--line-height-paragraph-small);
 
-		font: var(--font-paragraphs-small);
+		font: var(--font-paragraph-small);
 	}
 	&[data-size="xsmall"] {
-		--font-size: var(--font-size-paragraphs-xsmall);
-		--line-height: var(--line-height-paragraphs-xsmall);
+		--font-size: var(--font-size-paragraph-xsmall);
+		--line-height: var(--line-height-paragraph-xsmall);
 
-		font: var(--font-paragraphs-xsmall);
+		font: var(--font-paragraph-xsmall);
 	}
 
 	& + & {

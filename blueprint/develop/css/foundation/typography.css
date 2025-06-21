@@ -26,12 +26,12 @@
 	--font-size-label-small: calc(14rem / 16);
 	--font-size-label-xsmall: calc(12rem / 16);
 
-	--font-size-paragraphs-large: calc(18rem / 16);
-	--font-size-paragraphs-medium: calc(16rem / 16);
-	--font-size-paragraphs-small: calc(14rem / 16);
-	--font-size-paragraphs-xsmall: calc(12rem / 16);
+	--font-size-paragraph-large: calc(18rem / 16);
+	--font-size-paragraph-medium: calc(16rem / 16);
+	--font-size-paragraph-small: calc(14rem / 16);
+	--font-size-paragraph-xsmall: calc(12rem / 16);
 
-	--font-size: var(--font-size-paragraphs-medium);
+	--font-size: var(--font-size-paragraph-medium);
 
 	/* Line height */
 	--line-height-display-large: calc(112rem / 16);
@@ -51,12 +51,12 @@
 	--line-height-label-small: calc(16rem / 16);
 	--line-height-label-xsmall: calc(16rem / 16);
 
-	--line-height-paragraphs-large: calc(18rem / 16);
-	--line-height-paragraphs-medium: calc(16rem / 16);
-	--line-height-paragraphs-small: calc(14rem / 16);
-	--line-height-paragraphs-xsmall: calc(12rem / 16);
+	--line-height-paragraph-large: calc(18rem / 16);
+	--line-height-paragraph-medium: calc(16rem / 16);
+	--line-height-paragraph-small: calc(14rem / 16);
+	--line-height-paragraph-xsmall: calc(12rem / 16);
 
-	--line-height: var(--line-height-paragraphs-medium);
+	--line-height: var(--line-height-paragraph-medium);
 
 	/* Font */
 	--font-display-large: 700 var(--font-size-display-large)/var(--line-height-display-large) var(--font-family-display);
@@ -76,12 +76,12 @@
 	--font-label-small: 400 var(--font-size-label-small)/var(--line-height-label-small) var(--font-family);
 	--font-label-xsmall: 400 var(--font-size-label-xsmall)/var(--line-height-label-xsmall) var(--font-family);
 
-	--font-paragraphs-large: 400 var(--font-size-paragraphs-large)/var(--line-height-paragraphs-large) var(--font-family);
-	--font-paragraphs-medium: 400 var(--font-size-paragraphs-medium)/var(--line-height-paragraphs-medium) var(--font-family);
-	--font-paragraphs-small: 400 var(--font-size-paragraphs-small)/var(--line-height-paragraphs-small) var(--font-family);
-	--font-paragraphs-xsmall: 400 var(--font-size-paragraphs-xsmall)/var(--line-height-paragraphs-xsmall) var(--font-family);
+	--font-paragraph-large: 400 var(--font-size-paragraph-large)/var(--line-height-paragraph-large) var(--font-family);
+	--font-paragraph-medium: 400 var(--font-size-paragraph-medium)/var(--line-height-paragraph-medium) var(--font-family);
+	--font-paragraph-small: 400 var(--font-size-paragraph-small)/var(--line-height-paragraph-small) var(--font-family);
+	--font-paragraph-xsmall: 400 var(--font-size-paragraph-xsmall)/var(--line-height-paragraph-xsmall) var(--font-family);
 
-	--font: var(--font-paragraphs-medium);
+	--font: var(--font-paragraph-medium);
 
 	/* Letter spacing */
 	--leter-spacing-display: -0.003em;
