@@ -2,7 +2,7 @@
 
 return [
 	[
-		'pattern' => 'manifest.webmanifest',
+		'pattern' => 'site.webmanifest',
 		'action' => function() {
 			$content = snippet('manifest', ['site' => site()], true);
 			return new Kirby\Cms\Response($content, 'application/manifest+json');
