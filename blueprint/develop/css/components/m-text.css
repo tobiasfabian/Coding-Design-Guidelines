@@ -24,22 +24,22 @@
 	}
 
 	> * + * {
-		margin-block-start: calc(var(--gap-block) * 0.75 + var(--typo-margin-top) + var(--typo-margin-bottom));
+		margin-block-start: calc(--space-400);
 	}
 
-	&.-large {
+	&[data-size="large"] {
 		--font-size: var(--font-size-paragraphs-large);
 		--line-height: var(--line-height-paragraphs-large);
 
 		font: var(--font-paragraphs-large);
 	}
-	&.-small {
+	&[data-size="small"] {
 		--font-size: var(--font-size-paragraphs-small);
 		--line-height: var(--line-height-paragraphs-small);
 
 		font: var(--font-paragraphs-small);
 	}
-	&.-xsmall {
+	&[data-size="xsmall"] {
 		--font-size: var(--font-size-paragraphs-xsmall);
 		--line-height: var(--line-height-paragraphs-xsmall);
 
@@ -47,10 +47,7 @@
 	}
 
 	& + & {
-		margin-block-start: calc(var(--font-size) * var(--line-height));
-	}
-	&.-large + & {
-		margin-block-start: var(--gap-block);
+		margin-block-start: calc(--gap-block);
 	}
 
 	.a-heading + & {

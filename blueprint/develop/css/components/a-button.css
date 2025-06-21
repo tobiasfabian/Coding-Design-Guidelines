@@ -1,0 +1,20 @@
+.a-button {
+	--_padding-block: var(--space-200);
+	--_padding-inline: var(--space-300);
+
+	padding-inline: var(--_padding-inline);
+	padding-block: var(--_padding-block);
+	color: var(--color-content-primary-inverse);
+	background-color: var(--color-background-primary-inverse);
+
+	&[data-shape="pill"] {
+		border-radius: calc(1lh + var(--_padding-block) * 2);
+	}
+
+	&[data-size="small"] {
+		--_padding-block: var(--space-100);
+		--_padding-inline: var(--space-200);
+
+		font: var(--font-label-small);
+	}
+}

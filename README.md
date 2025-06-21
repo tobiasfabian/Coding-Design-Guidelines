@@ -1,5 +1,5 @@
 # Design Guidelines
-Version 1.3.0
+Version 1.4.0
 
 ## Table of Contents
 
@@ -31,10 +31,10 @@ Atomic Design distinguishes between the following *Components*.
 ### Example
 
 An *Atom* (`a`) component called *field*.  
-`a-field` is the *Block*. `-secondary` is the *Modifier*. `a-field__counter` is an *Element* inside the block/inside the component.
+`a-field` is the *Block*. `data-kind="secondary"` is the *Modifier*. `a-field__counter` is an *Element* inside the block/inside the component.
 
 ```html
-<div class="a-field -secondary">
+<div class="a-field" data-kind="secondary">
 	<label>Lorem</label>
 	<span class="a-field__counter">5</span>
 	<input value="Ipsum" type="text">
@@ -50,7 +50,7 @@ An *Atom* (`a`) component called *field*.
 		font-weight: 700;
 	}
 	
-	&.-secondary {
+	&[data-kind="secondary"] {
 		> label {
 			color: gray;
 		}

@@ -11,7 +11,7 @@
 @import 'foundation/DEBUG.css';
 
 /* Atoms */
-/* @import 'components/a-button.css'; */
+@import 'components/a-button.css';
 /* @import 'components/a-field.css'; */
 /* @import 'components/a-figure.css'; */
 @import 'components/a-heading.css';
@@ -19,11 +19,10 @@
 /* @import 'components/a-icon.css'; */
 /* @import 'components/a-loading-indicator.css'; */
 /* @import 'components/a-table.css'; */
-@import 'components/a-text.css';
-@import 'components/a-trim-leading.css';
 @import 'components/a-visually-hidden.css';
 
 /* Molecules */
+@import 'components/m-text.css';
 /* @import 'components/m-teaser.css'; */
 
 /* Organisms */
