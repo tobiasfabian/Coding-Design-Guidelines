@@ -17,7 +17,7 @@ tabs:
         type: fields
         fields:
           metaDescription:
-            extends: fields/metaDescription
+            extends: fields/meta-description
   pages:
     label: Unterseiten
     icon: list-bullet

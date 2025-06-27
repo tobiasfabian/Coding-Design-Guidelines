@@ -1,13 +1,17 @@
 <?php
 
 return [
+	// Kirby options
 	'locale' => 'de_DE.utf-8',
-	'routes' => require_once __DIR__ . '/options/routes.php',
-	'sitemap.ignoreTemplates' => ['error'],
+	'routes' => require __DIR__ . '/options/routes.php',
+	'thumbs' => require __DIR__ . '/options/thumbs.php',
 	'updates' => [
 		'kirby' => 'security',
 		'plugins' => [
 			'tobiaswolf/hashed-url' => false,
 		],
 	],
+
+	// Custom options
+	'sitemap.ignoreTemplates' => ['error'],
 ];

@@ -1,0 +1,9 @@
+label: Link
+type: object
+fields:
+  text:
+    type: text
+    required: true
+  link:
+    type: link
+    required: true

@@ -1,0 +1,13 @@
+label: field.blocks.image.ratio
+type: select
+placeholder: Auto
+options:
+  16/9: "16:9"
+  16/10: "16:10"
+  3/2: "3:2"
+  5/4: "5:4"
+  1/1: "1:1"
+  4/5: "4:5"
+  2/3: "2:3"
+  10/16: "10:16"
+  9/16: "9:16"

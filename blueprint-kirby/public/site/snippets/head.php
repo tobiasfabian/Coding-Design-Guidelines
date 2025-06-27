@@ -15,7 +15,7 @@ use Kirby\Cms\Page;
 
 	<title><?= $page->isHomePage() ? $site->title()->esc('attr') : $page->title()->esc('attr') . ' – ' . $site->title()->esc('attr') ?></title>
 
-	<link rel="icon" href="<? url('favicon.ico') ?>" sizes="32x32">
+	<link rel="icon" href="<?= url('favicon.ico') ?>" sizes="32x32">
 	<link rel="icon" href="<?= hashedUrl('assets/images/icon.svg') ?>" type="image/svg+xml">
 	<link rel="apple-touch-icon" href=<?= url('apple-touch-icon.png') ?>"><!-- 180×180 -->
 	<link rel="manifest" href="<?= url('site.webmanifest') ?>">

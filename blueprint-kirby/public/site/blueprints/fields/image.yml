@@ -1,0 +1,4 @@
+type: files
+multiple: false
+query: model.images
+layout: cards
