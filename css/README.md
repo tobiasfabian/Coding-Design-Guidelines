@@ -101,7 +101,7 @@ Each block get’s its own file (e.g. `components/m-alert-banner.css`. The file 
 }
 ```
 
-*Elements* must be written as ownn ruleset. It must not be nested inside of the *Block* (~~`&__heading`~~).
+*Elements* must be written as own ruleset. It must not be nested inside of the *Block* (~~`&__heading`~~).
 
 
 ### Modifiers
