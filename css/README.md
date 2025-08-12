@@ -101,9 +101,11 @@ Each block get’s its own file (e.g. `components/m-alert-banner.css`. The file 
 }
 ```
 
-*Elements* theoretically could be nested inside of the *Block* (`&__heading`), but this would clutter the *Block* which make it harder to maintain and read.
+*Elements* must be written as ownn ruleset. It must not be nested inside of the *Block* (~~`&__heading`~~).
+
 
 ### Modifiers
+
 
 *Modifiers* are written inside of each *Block* or *Element*. Preferably only *Blocks* do have *Modifiers*, but *Elements* can have *Modifiers* too.
 
