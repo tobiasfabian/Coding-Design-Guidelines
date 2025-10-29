@@ -24,7 +24,7 @@
 	}
 
 	> * + * {
-		margin-block-start: calc(--space-400);
+		margin-block-start: var(--space-400);
 	}
 
 	&[data-size="large"] {
@@ -47,7 +47,7 @@
 	}
 
 	& + & {
-		margin-block-start: calc(--gap-block);
+		margin-block-start: var(--gap-block);
 	}
 
 	.a-heading + & {

@@ -55,48 +55,71 @@ The `index.js` (or other JavaScript files in the JavaScript root directory) impo
 import AbstractElement from '../configs/abstract-element';
 
 class AField extends AbstractElement {
-	constructor(element) {
-		// super
-		super(element);
+  /** @param {HTMLDivElement} element */
+  constructor(element) {
+    // super
+    super(element);
 
-		// variables
-		const { theme } = element.dataset;
+    // variables
+    const { theme } = element.dataset;
 
-		// class properties
-		this.element = element;
-		this.inputElement = element.querySelector('input');
+    // class properties
+    this.element = element;
 
-		// functions
-		function lorem() {
-			// …
-		}
+    /** @type {HTMLInputElement} */
+    this.inputElement = element.querySelector('input');
 
-		// event functions
-		function onChange() {
-			// …
-		}
+    // functions
+    function lorem() {
+      // …
+    }
 
-		// event listeners
-		if (theme === 'positive') {
-			this.inputElement.addEventListener('change', onChange);
-		}
+    // event functions
+    /** @param {InputEvent} event */
+    function onInput(event) {
+      // …
+    }
 
-		// init
-		this.init();
-	}
+    // event listeners
+    if (theme === 'positive') {
+      this.inputElement.addEventListener('input', onInput);
+    }
 
-	get value() {
-		return this.inputElement.value;
-	}
+    // init
+    this.init();
+  }
 
-	init() {
-		// …
-	}
+  get value() {
+    return this.inputElement.value;
+  }
+
+  init() {
+    // …
+  }
 }
+
+document.querySelectorAll('.a-field').forEach((_) => new AField(_));
 
 export default AField;
 ```
 
 ## Linting
 
-All JavaScript files lint against the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
+All JavaScript files are linted against the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
+
+## JSDoc
+
+[JSDoc](https://jsdoc.app/howto-es2015-classes) comments should be used whenever possible.
+
+### Advanced
+
+Type definitions can be imported.
+
+```js
+/** @typedef {import("../custom-elements/my-field").default} MyField */
+
+//…
+/** @type {MyField} */
+const aFieldElement = document.querySelector('my-field');
+//…
+```

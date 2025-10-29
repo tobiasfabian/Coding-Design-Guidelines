@@ -1,4 +1,5 @@
 class AbstractElement {
+	/** @param {HTMLElement} element */
 	constructor(element) {
 		this.element = element;
 	}

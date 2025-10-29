@@ -1,5 +1,5 @@
 # Design Guidelines
-Version 1.5.0
+Version 1.6.0
 
 ## Table of Contents
 
@@ -69,19 +69,20 @@ An *Atom* (`a`) component called *field*.
 
 ```js
 class AField {
+  /** @param {HTMLDivElement} element */
 	constructor(element) {
 		const inputElement = element.querySelector('input');
 		const counterElement = element.querySelector('.a-field__counter');
 		
-		function onInputChange() {
+		function onInput() {
 			counterElement.innerText = inputElement.value.length;
 		}
 		
-		inputElement.addEventListener('change', onInputChange);
+		inputElement.addEventListener('input', onInput);
 	}
 }
 
-export default AField;
+document.querySelectorAll('.a-field').forEach((_) => new AField(_));
 ```
 </details>
 
