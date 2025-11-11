@@ -1,0 +1,7 @@
+type: writer
+toolbar:
+  inline: false
+marks:
+  - bold
+  - link
+inline: true

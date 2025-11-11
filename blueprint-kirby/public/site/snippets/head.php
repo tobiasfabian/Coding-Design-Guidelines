@@ -15,10 +15,10 @@ use Kirby\Cms\Page;
 
 	<title><?= $page->isHomePage() ? $site->title()->esc('attr') : $page->title()->esc('attr') . ' – ' . $site->title()->esc('attr') ?></title>
 
-	<link rel="icon" href="<? url('favicon.ico') ?>" sizes="32x32">
-	<link rel="icon" href="<?= hashedUrl('/assets/images/icon.svg') ?>" type="image/svg+xml">
+	<link rel="icon" href="<?= url('favicon.ico') ?>" sizes="32x32">
+	<link rel="icon" href="<?= hashedUrl('assets/images/icon.svg') ?>" type="image/svg+xml">
 	<link rel="apple-touch-icon" href=<?= url('apple-touch-icon.png') ?>"><!-- 180×180 -->
-	<link rel="manifest" href="<?= url('/site.webmanifest') ?>">
+	<link rel="manifest" href="<?= url('site.webmanifest') ?>">
 
 	<meta name="robots" content="index, follow"><!-- Optional -->
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -26,10 +26,8 @@ use Kirby\Cms\Page;
 	<meta property="og:title" content="<?= $page->title()->esc('attr') ?>">
 	<meta property="og:site_name" content="<?= $site->title()->esc('attr') ?>">
 
-	<meta name="theme-color" content="*"><!-- Optional -->
-
 	<link rel="canonical" href="<?= $page->url() ?>"><!-- Optional -->
 
-	<link rel="stylesheet" href="<?= hashedUrl('/assets/css/index.css') ?>">
-	<script src="<?= hashedUrl('/assets/js/index.js') ?>" defer></script><!-- Optional -->
+	<link rel="stylesheet" href="<?= hashedUrl('assets/css/index.css') ?>">
+	<script src="<?= hashedUrl('assets/js/index.js') ?>" defer></script><!-- Optional -->
 </head>

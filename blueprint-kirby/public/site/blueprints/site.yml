@@ -1,6 +1,18 @@
 title: Site
 
 sections:
-  pages:
-    label: Seiten
+  home:
     type: pages
+    create: false
+    templates:
+      - home
+  pages:
+    type: pages
+    templatesIgnore:
+      - home
+      - error
+  error:
+    type: pages
+    create: false
+    templates:
+      - error

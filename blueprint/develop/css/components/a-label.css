@@ -1,0 +1,17 @@
+/* Typography */
+.a-label {
+	font: var(--font-label-medium);
+
+	&[data-size="large"] {
+		font: var(--font-label-large);
+	}
+	&[data-size="medium"] {
+		font: var(--font-label-medium);
+	}
+	&[data-size="small"] {
+		font: var(--font-label-small);
+	}
+	&[data-size="xsmall"] {
+		font: var(--font-label-xsmall);
+	}
+}

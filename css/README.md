@@ -22,12 +22,33 @@ Example: `m-alert-banner`
 The name of the *Element* is separated by `__`.  
 Example: `m-alert-banner__heading`
 
-### Modifier
-The name of a *Modifier* is preceded by `-`. (e.g. `-danger`). The *Modifier* isn’t hard wired to the *Element* (in pure BEM it would be `m-alert-banner--danger`). This must be taken into account. The pros and cons of this technique are described in [ABEM. A more useful adaptation of BEM. – CSS-Tricks](https://css-tricks.com/abem-useful-adaptation-bem/#aa-abem-modifier-issues).  
-Example: `a-button -danger`
+### Modifiers
+Data attributes are used for *modifiers*. Therefore modifiers *can* have a key and value.  
+Example: `a-button[data-theme="negative"]`
+
+<details>
+<summary>Common modifiers</summary>
+
+- `data-theme`: 
+	- `negative` (red)
+	- `positive` (green)
+	- `warning` (yellow)
+	- `info` (blue)
+- `data-kind`  
+ Is used to differentiate between importance. ([Uber Base Reference](https://base.uber.com/6d2425e9f/p/756216-button/b/336373/t/19b304))
+	- `primary`
+	- `secondary`
+	- `tertiary`
+- `data-size`  
+*medium* should not be used, because medium is the default size.
+	- `xsmall`
+	- `small`
+	- `large`
+	- `xlarge`
+</details>
 
 ### Function over appearance
-Generally names should describe the function not the appearance. Names should be as general as possible but as specific as needed. A red “delete item” button should get a *Modifier* called `-danger` instead of `-red`. `-red` is describing the appearance. `-delete` is too specific, `-danger` is more generic.
+Generally names should describe the function not the appearance. Names should be as general as possible but as specific as needed. A red “delete item” button should get a *Modifier* called `data-theme="negative"` instead of `data-theme="red"`. `red` is describing the appearance. `delete` is too specific, `negative` is more generic.
 
 ### Variables
 Variables should be named after the property for which they are intended.  
@@ -37,7 +58,7 @@ Example: `--transition-duration: 300ms` instead of `--transition: 300ms`.
 Most of the time, variables are meant for a specific *thing*. To describe this specific *thing*, use `-` to separate the attribute name from the *thing*.  
 Example: `--transition-duration-popup: 500ms`
 
-For *variables*, the rule that function is preferable over appearance also applies. 
+For *variables*, the rule that function is preferable over appearance also applies.  
 Example: `--font-family-heading` instead of `--font-family-serif`.
 
 <details>
@@ -64,7 +85,7 @@ Nesting makes writing CSS much easier. But when it's overused, the specificity i
 
 ### Blocks and Elements
 
-Each block get’s its own file (e.g. `components/_m-alert-banner.css`. The file starts with the rule of the *Block* selector itself. The *Block* selector is followed by the *Element* selectors.
+Each block get’s its own file (e.g. `components/m-alert-banner.css`. The file starts with the rule of the *Block* selector itself. The *Block* selector is followed by the *Element* selectors.
 
 ```css
 .m-alert-banner {
@@ -80,15 +101,17 @@ Each block get’s its own file (e.g. `components/_m-alert-banner.css`. The file
 }
 ```
 
-*Elements* theoretically could be nested inside of the *Block* (`&__heading`), but this would clutter the *Block* which make it harder to maintain and read.
+*Elements* must be written as own ruleset. It must not be nested inside of the *Block* (~~`&__heading`~~).
+
 
 ### Modifiers
+
 
 *Modifiers* are written inside of each *Block* or *Element*. Preferably only *Blocks* do have *Modifiers*, but *Elements* can have *Modifiers* too.
 
 ```css
 .m-alert-banner {
-	&.-danger {
+	&[data-theme="negative"] {
 		…
 	}
 }
@@ -96,7 +119,7 @@ Each block get’s its own file (e.g. `components/_m-alert-banner.css`. The file
 #### Element with Block Modifier
 ```css
 .m-alert-banner__heading {
-	.m-alert-banner.-danger & {
+	.m-alert-banner[data-theme="negative"] & {
 		…
 	}
 }
@@ -135,9 +158,9 @@ The rules inside of a *Block*/*Element* could be very long that’s why a specif
 	This is used to define how elements behave against other elements. E.g. the `margin-block-start` of a `p` element after a `h1` element. (See [The Stack: Every Layout](https://every-layout.dev/layouts/stack/))  
 	`> h1 + p` 
 - *Modifiers* ([Element with Block Modifier](#element-with-block-modifier))  
-	`.m-alert-banner.-danger &`
+	`.m-alert-banner[data-theme="negative"] &`
 - *Modifiers*  
-	`&.-danger`
+	`&[data-theme="negative"]`
 - `@supports` rules
 - [Pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)  
 	`:hover`, `:focus-visible`
@@ -176,14 +199,14 @@ The rules inside of a *Block*/*Element* could be very long that’s why a specif
 		margin-block-start: 1rem;
 	}
 	
-	&.-danger {
+	&[data-theme="negative"] {
 		…
 	}
 	
 	@supports (…) {
 		…
 		
-		&.-danger {
+		&[data-theme="negative"] {
 			…
 		}
 	}
@@ -233,7 +256,7 @@ Modifiers should be used instead.
 ```css
 .a-button {
 
-	&.-alert {
+	&[data-theme="negative"] {
 		background-color: …;
 	}
 }

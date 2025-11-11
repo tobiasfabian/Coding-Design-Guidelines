@@ -1,0 +1,22 @@
+name: field.blocks.gallery.name
+icon: dashboard
+preview: gallery
+fields:
+  images:
+    label: field.blocks.gallery.images.label
+    type: files
+    query: model.images
+    multiple: true
+    layout: cards
+    size: small
+    empty: field.blocks.gallery.images.empty
+    uploads:
+      template: blocks/image
+    image:
+      ratio: 3/2
+  ratio:
+    extends: fields/ratio
+    width: 1/2
+    required: true
+    placeholder: false
+    default: 3/2

@@ -3,6 +3,8 @@
 
 $json = [
 	'name' => $site->title()->toString(),
+	'start_url' => $site->url(),
+	'display' => 'minimal-ui',
 ];
 
 $icon = asset('assets/images/icon.png');

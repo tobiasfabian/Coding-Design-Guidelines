@@ -3,17 +3,32 @@
  */
 
 :root {
-	/* Grid */
-	--gap-inline: calc(40rem / 16);
-	--gap-block: calc(40rem / 16);
-
 	/* Sizes */
+	--space-000: 0;
+	--space-050: calc(2rem / 16);
+	--space-100: calc(4rem / 16);
+	--space-200: calc(8rem / 16);
+	--space-300: calc(12rem / 16);
+	--space-400: calc(16rem / 16);
+	--space-500: calc(24rem / 16);
+	--space-600: calc(32rem / 16);
+	--space-700: calc(40rem / 16);
+	--space-800: calc(52rem / 16);
+	--space-900: calc(64rem / 16);
+	--space-1000: calc(96rem / 16);
+
+	/* Grid */
+	--gap-inline: var(--space-700);
+	--gap-block: var(--space-700);
+
+	/* Widths */
 	--max-width: calc(1600rem / 16);
 	--max-width-content: calc(1080rem / 16);
 	--max-width-text: calc(680rem / 16);
 
-	/* Border */
-	--border-radius-small: calc(4rem / 16);
-	--border-radius-medium: calc(5rem / 16);
-	--border-radius-large: calc(6rem / 16);
+	/* Borders */
+	/* Use px values instead of rem */
+	--border-radius-small: 4px;
+	--border-radius-medium: 5px;
+	--border-radius-large: 6px;
 }

@@ -16,12 +16,12 @@
 @import 'components/a-field';
 @import 'components/a-loading-indicator';
 @import 'components/a-table';
-@import 'components/a-text';
 @import 'components/a-visually-hidden';
 
 /* Molecules */
 @import 'components/m-breadcrumbs';
 @import 'components/m-dialog';
+@import 'components/m-text';
 
 /* Organisms */
 @import 'components/o-header';

@@ -1,6 +1,7 @@
-import AbstractElement from '../configs/abstract-element';
+import AbstractElement from '../foundation/abstract-element';
 
 class AField extends AbstractElement {
+	/** @param {HTMLDivElement} element */
 	constructor(element) {
 		// super
 		super(element);
@@ -10,6 +11,8 @@ class AField extends AbstractElement {
 
 		// class properties
 		this.element = element;
+
+		/** @type {HTMLInputElement} */
 		this.inputElement = element.querySelector('input');
 
 		// functions
@@ -18,13 +21,14 @@ class AField extends AbstractElement {
 		}
 
 		// event functions
-		function onChange() {
+		/** @param {InputEvent} event */
+		function onInput(event) {
 			// …
 		}
 
 		// event listeners
 		if (theme === 'positive') {
-			this.inputElement.addEventListener('change', onChange);
+			this.inputElement.addEventListener('input', onInput);
 		}
 
 		// init
@@ -39,5 +43,7 @@ class AField extends AbstractElement {
 		// …
 	}
 }
+
+document.querySelectorAll('.a-field').forEach((_) => new AField(_));
 
 export default AField;

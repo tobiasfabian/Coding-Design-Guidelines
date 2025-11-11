@@ -1,28 +1,33 @@
 .a-heading {
-	font: var(--font-heading-xxlarge);
+	font: var(--font-heading-medium);
+	text-wrap-style: balance;
 }
 
 h1.a-heading,
-.a-heading.-xxlarge {
+.a-heading[data-size="xxlarge"] {
 	font: var(--font-heading-xxlarge);
 }
 h2.a-heading,
-.a-heading.-xlarge {
+.a-heading[data-size="xlarge"] {
 	font: var(--font-heading-xlarge);
 }
 h3.a-heading,
-.a-heading.-large {
+.a-heading[data-size="large"] {
 	font: var(--font-heading-large);
 }
 h4.a-heading,
-.a-heading.-medium {
+.a-heading[data-size="medium"] {
 	font: var(--font-heading-medium);
 }
 h5.a-heading,
-.a-heading.-small {
+.a-heading[data-size="small"] {
 	font: var(--font-heading-small);
 }
+<<<<<<< Updated upstream
 h5.a-heading,
-.a-heading.-xsmall {
+=======
+h6.a-heading,
+>>>>>>> Stashed changes
+.a-heading[data-size="xsmall"] {
 	font: var(--font-heading-xsmall);
 }

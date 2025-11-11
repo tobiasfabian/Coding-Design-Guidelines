@@ -11,25 +11,32 @@
 @import 'foundation/DEBUG.css';
 
 /* Atoms */
+<<<<<<< Updated upstream
+@import 'components/a-button.css';
+@import 'components/a-heading.css';
+@import 'components/a-label.css';
+=======
 /* @import 'components/a-button.css'; */
 /* @import 'components/a-field.css'; */
 /* @import 'components/a-figure.css'; */
+@import 'components/a-label.css';
 @import 'components/a-heading.css';
 /* @import 'components/a-hr.css'; */
 /* @import 'components/a-icon.css'; */
 /* @import 'components/a-loading-indicator.css'; */
 /* @import 'components/a-table.css'; */
-@import 'components/a-text.css';
-@import 'components/a-trim-leading.css';
+>>>>>>> Stashed changes
 @import 'components/a-visually-hidden.css';
 
 /* Molecules */
+@import 'components/m-stack.css';
+@import 'components/m-text.css';
 /* @import 'components/m-teaser.css'; */
 
 /* Organisms */
 @import 'components/o-article.css';
 @import 'components/o-footer.css';
-/* @import 'components/o-main-nav.css'; */
+/* @import 'components/o-nav-main.css'; */
 
 /* Templates */
 @import 'components/t-default.css';
