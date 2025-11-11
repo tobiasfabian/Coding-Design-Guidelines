@@ -1,0 +1,48 @@
+.m-text {
+	--_gap-paragraph: calc(var(--line-height-paragraph-medium) * 0.5em);
+
+	font: var(--font-paragraph-medium);
+
+	/* Child elements */
+	> h1 {
+		font: var(--font-heading-xxlarge);
+	}
+	> h2 {
+		font: var(--font-heading-xlarge);
+	}
+	> h3 {
+		font: var(--font-heading-large);
+	}
+	> h4 {
+		font: var(--font-heading-medium);
+	}
+	> h5 {
+		font: var(--font-heading-small);
+	}
+	> h6 {
+		font: var(--font-heading-xsmall);
+	}
+
+	:where(ul, ol) {
+		padding-inline-start: 2ch;
+		* + :where(ul, ol, li) {
+			margin-block-start: calc(var(--_gap-paragraph) * 0.5);
+		}
+	}
+
+	/* Modifications */
+	&[data-size="large"] {
+		font: var(--font-paragraph-large);
+	}
+	&[data-size="small"] {
+		font: var(--font-paragraph-small);
+	}
+	&[data-size="xsmall"] {
+		font: var(--font-paragraph-xsmall);
+	}
+
+	/* Stack */
+	> * + * {
+		margin-block-start: var(--_gap-paragraph);
+	}
+}
