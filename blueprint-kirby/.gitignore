@@ -2,17 +2,15 @@ node_modules
 
 # System files
 # ------------
+
 Icon
 .DS_Store
 
 # Temporary files
 # ---------------
+
 /public/media/*
 !/public/media/.gitkeep
-
-# Lock files
-# ---------------
-.lock
 
 # Editors
 # (sensitive workspace files)
@@ -28,28 +26,34 @@ Icon
 
 # Cache Files
 # ---------------
+
 /public/site/cache/*
 !/public/site/cache/.gitkeep
 
 # Accounts
 # ---------------
+
 /public/site/accounts/*
 !/public/site/accounts/.gitkeep
 
 # Sessions
 # ---------------
+
 /public/site/sessions/*
 !/public/site/sessions/.gitkeep
 
 # Logs
 # ---------------
+
 /public/site/logs/*
 !/public/site/logs/.gitkeep
 
 # License
 # ---------------
+
 /public/site/config/.license
 
 # Other
 # ---------------
+
 /public/site/config/env.php
