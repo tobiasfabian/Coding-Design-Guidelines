@@ -75,6 +75,7 @@ return [
 		'og-image'=> [
 			'width' => 1200,
 			'height' => 630,
+			'crop' => true,
 		],
 	],
 	'srcsets' => [...$srcsets,
@@ -82,6 +83,7 @@ return [
 			'1200w' => [
 				'width' => 1200,
 				'height' => 630,
+				'crop' => true,
 			],
 		],
 	],
