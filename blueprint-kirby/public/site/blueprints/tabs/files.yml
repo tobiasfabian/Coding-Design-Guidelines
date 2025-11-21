@@ -1,0 +1,6 @@
+label: Dateien
+icon: file
+sections:
+  files:
+    label: Dateien
+    type: files

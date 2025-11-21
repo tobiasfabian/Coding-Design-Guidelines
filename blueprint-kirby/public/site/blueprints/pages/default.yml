@@ -1,34 +1,15 @@
 title: Standard-Seite
 
+navigation:
+  status: all
+  template: all
+
 tabs:
   content:
-    label: Inhalt
-    icon: page
-    sections:
-      fields:
-        fields:
-          text:
-            extends: fields/writer
+    extends: tabs/content
   meta:
-    label: Meta
-    icon: search
-    sections:
-      metaFields:
-        type: fields
-        fields:
-          metaDescription:
-            extends: fields/meta-description
+    extends: tabs/meta
   pages:
-    label: Unterseiten
-    icon: list-bullet
-    sections:
-      pages:
-        label: Unterseiten
-        type: pages
+    extends: tabs/subpages
   files:
-    label: Dateien
-    icon: file
-    sections:
-      files:
-        label: Dateien
-        type: files
+    extends: tabs/files

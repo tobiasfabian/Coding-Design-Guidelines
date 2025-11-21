@@ -1,0 +1,8 @@
+label: Meta
+icon: search
+sections:
+  metaFields:
+    type: fields
+    fields:
+      metaDescription:
+        extends: fields/meta-description

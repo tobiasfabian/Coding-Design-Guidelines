@@ -1,0 +1,6 @@
+label: Unterseiten
+icon: list-bullet
+sections:
+  pages:
+    label: Unterseiten
+    type: pages

@@ -1,0 +1,7 @@
+label: Inhalt
+icon: page
+sections:
+  fields:
+    fields:
+      text:
+        extends: fields/writer
