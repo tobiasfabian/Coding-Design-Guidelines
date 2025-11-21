@@ -26,7 +26,7 @@ use Kirby\Cms\Page;
 	<meta property="og:title" content="<?= $page->title()->esc('attr') ?>">
 	<meta property="og:site_name" content="<?= $site->title()->esc('attr') ?>">
 	<?php if ($ogImage = $page->metaImage()->toFile()): ?>
-		<meta property="og:image" content="<?= $ogImage->thumb('og-image') ?>">
+		<meta property="og:image" content="<?= $ogImage->thumb('og-image')->url() ?>">
 		<meta property="og:image:alt" content="<?= $ogImage->alt()->esc('attr') ?>">
 		<meta property="og:image:width" content="1200">
 		<meta property="og:image:height" content="630">
