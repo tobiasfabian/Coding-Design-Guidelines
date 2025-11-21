@@ -17,10 +17,10 @@ use Kirby\Cms\Page;
 
 	<link rel="icon" href="<?= url('favicon.ico') ?>" sizes="32x32">
 	<link rel="icon" href="<?= hashedUrl('assets/images/icon.svg') ?>" type="image/svg+xml">
-	<link rel="apple-touch-icon" href=<?= url('apple-touch-icon.png') ?>"><!-- 180×180 -->
+	<link rel="apple-touch-icon" href="<?= url('apple-touch-icon.png') ?>" sizes="180x180">
 	<link rel="manifest" href="<?= url('site.webmanifest') ?>">
 
-	<meta name="robots" content="index, follow"><!-- Optional -->
+	<meta name="robots" content="index, follow, max-image-preview:large"><!-- Optional -->
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta name="description" content="<?= $page->metaDescription()->esc('attr') ?>">
 	<meta property="og:title" content="<?= $page->title()->esc('attr') ?>">
