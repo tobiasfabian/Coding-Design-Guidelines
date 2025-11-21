@@ -4,4 +4,4 @@ sections:
   fields:
     fields:
       text:
-        extends: fields/writer
+        extends: fields/blocks

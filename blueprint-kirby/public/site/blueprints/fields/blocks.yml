@@ -1,0 +1,10 @@
+type: blocks
+pretty: true
+fieldsets:
+  - text
+  - button
+  - cite
+  - video
+  - image
+  - gallery
+  - line

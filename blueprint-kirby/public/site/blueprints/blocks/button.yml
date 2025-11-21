@@ -1,0 +1,10 @@
+name: Link
+icon: url
+label: "{{ text }}"
+fields:
+  text:
+    type: text
+    required: true
+  link:
+    type: link
+    required: true
