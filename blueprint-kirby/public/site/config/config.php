@@ -6,6 +6,12 @@ return [
 	'slugs' => 'de',
 	'routes' => require __DIR__ . '/options/routes.php',
 	'thumbs' => require __DIR__ . '/options/thumbs.php',
+	'cache' => [
+		'pages' => [
+			'active' => true,
+			'type'   => 'static',
+		],
+	],
 	'updates' => [
 		'kirby' => 'security',
 		'plugins' => [

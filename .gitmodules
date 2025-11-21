@@ -1,0 +1,3 @@
+[submodule "blueprint-kirby/public/site/plugins/staticache"]
+	path = blueprint-kirby/public/site/plugins/staticache
+	url = https://github.com/getkirby/staticache.git
