@@ -27,7 +27,7 @@ $height = option('thumbs.presets')[$srcset]['crop'] === true ? option('thumbs.pr
 	'srcset' => $image->srcset($srcset),
 	'alt' => esc($alt, 'attr'),
 	'width' => $width,
-	'height' => $image->height(),
+	'height' => $height,
 	'sizes' => $sizes,
 	'loading' => $loading ?? null,
 	'fetchpriority' => $fetchpriority ?? null,
