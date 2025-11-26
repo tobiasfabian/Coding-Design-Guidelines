@@ -8,3 +8,9 @@ fields:
   link:
     type: link
     required: true
+  target:
+    label: open.newWindow
+    type: toggle
+    text:
+      - "no"
+      - "yes"
