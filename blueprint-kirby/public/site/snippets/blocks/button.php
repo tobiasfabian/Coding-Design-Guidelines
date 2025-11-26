@@ -1,8 +1,12 @@
 <?php
+/** @var \Kirby\Cms\Block $block */
 $href = $block->link()->toUrl();
+$target = $block->target()->toBool() ? '_blank' : null;
 
 if (empty($href)) return;
 ?>
-<a class="a-button" href="<?= $href ?>">
-	<?= $block->text() ?>
-</a>
+<a <?= attr([
+	'class' => 'a-button',
+	'href' => $href,
+	'target' => $target,
+]) ?>><?= $block->text() ?></a>
