@@ -6,6 +6,10 @@ module.exports = (ctx) => ({
 		'@csstools/postcss-oklab-function': true,
 		'@csstools/postcss-color-mix-function': true,
 		autoprefixer: true,
-		cssnano: ctx.env === 'production' ? { preset: 'default' } : false,
+		cssnano: ctx.env === 'production' ? {
+			preset: ['default', {
+				cssDeclarationSorter: false,
+			}],
+		} : false,
 	},
 });
