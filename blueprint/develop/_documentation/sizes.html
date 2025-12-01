@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="robots" content="noindex, nofollow">
+		<title>Sizes – Documentation</title>
+		<link rel="stylesheet" href="./index.css">
+		<style>
+			.sizes {
+				display: grid;
+				font: var(--font-label-xsmall);
+				gap: 2rem;
+			}
+			.size {
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+				text-wrap-style: balance;
+
+				&::before {
+					content: '';
+					background: var(--color-black);
+					inline-size: var(--size);
+					block-size: calc(4rem / 16);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main class="m-stack">
+			<h1 class="a-heading">Sizes</h1>
+
+			<div class="sizes">
+			</div>
+		</main>
+
+		<script>
+			(async () => {
+				const sizesElement = document.querySelector('.sizes');
+
+				async function getAllCSSVariables() {
+					const allCSSVars = new Set();
+
+					function processRules(rules) {
+						for (const rule of rules) {
+							if (rule instanceof CSSStyleRule && rule.style) {
+								for (const prop of rule.style) {
+									if (prop.startsWith('--size')) {
+										allCSSVars.add(prop);
+									}
+								}
+							} else if (rule instanceof CSSImportRule) {
+								try {
+									processStylesheet(rule.styleSheet);
+								} catch (e) {
+									console.warn('Cannot access imported stylesheet:', rule.href);
+								}
+							} else if (rule.cssRules) {
+								// Handle nested rules like @media
+								processRules(rule.cssRules);
+							}
+						}
+					}
+
+					function processStylesheet(sheet) {
+						try {
+							if (sheet.cssRules) {
+								processRules(sheet.cssRules);
+							}
+						} catch (e) {
+							console.warn('Cannot access stylesheet:', sheet.href);
+						}
+					}
+
+					for (const sheet of document.styleSheets) {
+						processStylesheet(sheet);
+					}
+
+					return Array.from(allCSSVars);
+				}
+
+				const sortedCssSizeVars = await getAllCSSVariables();
+				const rootStyles = getComputedStyle(document.documentElement);
+
+				sortedCssSizeVars.forEach((sizeName) => {
+					const size = rootStyles.getPropertyValue(sizeName).trim()
+					sizesElement.appendChild(Object.assign(document.createElement('div'), {
+						textContent: `${sizeName} – ${size}`,
+						className: 'size',
+						style: `--size: var(${sizeName})`
+					}))
+				});
+			})();
+
+		</script>
+	</body>
+</html>

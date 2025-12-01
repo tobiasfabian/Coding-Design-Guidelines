@@ -27,6 +27,7 @@
 	--max-width: calc(1600rem / 16);
 	--max-width-content: calc(1080rem / 16);
 	--max-width-text: calc(680rem / 16);
+	--height-header: calc(60rem / 16);
 
 	/* Z-indexes */
 	--z-index-dialog: 600;
@@ -34,6 +35,8 @@
 
 	/* Borders */
 	/* Use px values instead of rem */
+	--border-size-small: 1px;
+	--border-size-medium: 2px;
 	--border-radius-small: 4px;
 	--border-radius-medium: 5px;
 	--border-radius-large: 6px;

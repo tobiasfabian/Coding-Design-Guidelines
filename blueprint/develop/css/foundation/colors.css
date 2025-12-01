@@ -2,41 +2,41 @@
 
 :root {
 	/* Color Primitives */
-	--color-white: hsla(0, 0%, 100%, 1);
-	--color-gray-50: hsla(0, 0%, 95%, 1);
-	--color-gray-100: hsla(0, 0%, 90%, 1);
-	--color-gray-200: hsla(0, 0%, 80%, 1);
-	--color-gray-300: hsla(0, 0%, 70%, 1);
-	--color-gray-400: hsla(0, 0%, 60%, 1);
-	--color-gray-500: hsla(0, 0%, 50%, 1);
-	--color-gray-600: hsla(0, 0%, 40%, 1);
-	--color-gray-700: hsla(0, 0%, 30%, 1);
-	--color-gray-800: hsla(0, 0%, 20%, 1);
-	--color-gray-900: hsla(0, 0%, 10%, 1);
-	--color-gray-950: hsla(0, 0%, 5%, 1);
-	--color-black: hsla(0, 0%, 0%, 1);
+	--color-white: hsl(0 0% 100%);
+	--color-gray-20: hsl(0 0% 98%);
+	--color-gray-100: hsl(0 0% 90%);
+	--color-gray-200: hsl(0 0% 80%);
+	--color-gray-300: hsl(0 0% 70%);
+	--color-gray-400: hsl(0 0% 60%);
+	--color-gray-500: hsl(0 0% 50%);
+	--color-gray-600: hsl(0 0% 40%);
+	--color-gray-700: hsl(0 0% 30%);
+	--color-gray-800: hsl(0 0% 20%);
+	--color-gray-900: hsl(0 0% 10%);
+	--color-gray-950: hsl(0 0% 5%);
+	--color-black: hsl(0 0% 0%);
 
-	--color-red-50: hsla(360, 100%, 95%, 1);
-	--color-red-100: hsla(360, 100%, 90%, 1);
-	--color-red-200: hsla(360, 100%, 80%, 1);
-	--color-red-300: hsla(360, 100%, 70%, 1);
-	--color-red-400: hsla(360, 100%, 60%, 1);
-	--color-red-500: hsla(360, 100%, 50%, 1);
-	--color-red-600: hsla(360, 100%, 40%, 1);
-	--color-red-700: hsla(360, 100%, 30%, 1);
-	--color-red-800: hsla(360, 100%, 20%, 1);
-	--color-red-900: hsla(360, 100%, 10%, 1);
+	--color-red-50: hsl(360 100% 95%);
+	--color-red-100: hsl(360 100% 90%);
+	--color-red-200: hsl(360 100% 80%);
+	--color-red-300: hsl(360 100% 70%);
+	--color-red-400: hsl(360 100% 60%);
+	--color-red-500: hsl(360 100% 50%);
+	--color-red-600: hsl(360 100% 40%);
+	--color-red-700: hsl(360 100% 30%);
+	--color-red-800: hsl(360 100% 20%);
+	--color-red-900: hsl(360 100% 10%);
 
-	--color-yellow-50: hsla(55, 100%, 95%, 1);
-	--color-yellow-100: hsla(55, 100%, 90%, 1);
-	--color-yellow-200: hsla(55, 100%, 80%, 1);
-	--color-yellow-300: hsla(55, 100%, 70%, 1);
-	--color-yellow-400: hsla(55, 100%, 60%, 1);
-	--color-yellow-500: hsla(55, 100%, 50%, 1);
-	--color-yellow-600: hsla(55, 100%, 40%, 1);
-	--color-yellow-700: hsla(55, 100%, 30%, 1);
-	--color-yellow-800: hsla(55, 100%, 20%, 1);
-	--color-yellow-900: hsla(55, 100%, 10%, 1);
+	--color-yellow-50: hsl(55 100% 95%);
+	--color-yellow-100: hsl(55 100% 90%);
+	--color-yellow-200: hsl(55 100% 80%);
+	--color-yellow-300: hsl(55 100% 70%);
+	--color-yellow-400: hsl(55 100% 60%);
+	--color-yellow-500: hsl(55 100% 50%);
+	--color-yellow-600: hsl(55 100% 40%);
+	--color-yellow-700: hsl(55 100% 30%);
+	--color-yellow-800: hsl(55 100% 20%);
+	--color-yellow-900: hsl(55 100% 10%);
 
 	/* Foundation Colors */
 	--color-negative: var(--color-red-400);
@@ -65,9 +65,9 @@
 	--color-border-selected-inverse: var(--color-white);
 
 	/* Shadows */
-	--box-shadow: 0 1px 10px -calc(10rem / 16) rgba(0,0,0,0.1),
-	              0 1.5px 20px -calc(10rem / 16) rgba(0,0,0,0.1),
-	              0 2px 30px -calc(10rem / 16) rgba(0,0,0,0.1);
+	--box-shadow: 0 1px 10px -10px hsl(0deg 0 0 / 0.1),
+	              0 1.5px 20px -10px hsl(0deg 0 0 / 0.1),
+	              0 2px 30px -10px hsl(0deg 0 0 / 0.1);
 
 	@media (prefers-color-scheme: dark) {
 		/* Foundation Colors */

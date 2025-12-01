@@ -1,4 +1,4 @@
-html {
+:root {
 	font-family: var(--font-family);
 	-webkit-hyphens: auto;
 	-webkit-hyphenate-limit-after: var(--hyphenate-limit);
@@ -10,14 +10,17 @@ html {
 	}
 }
 
-body {
-	font: var(--font-paragraph-medium);
-	display: flex;
-	flex-direction: column;
-}
-
-html[data-no-scroll],
-html[data-no-scroll] & {
+:root[data-no-scroll],
+:root[data-no-scroll] & {
 	overflow: hidden;
 	block-size: 100%;
 }
+
+body {
+	display: flex;
+	flex-direction: column;
+	font: var(--font-paragraph-medium);
+	color: var(--color-content-primary);
+	background-color: var(--color-background-primary);
+}
+
