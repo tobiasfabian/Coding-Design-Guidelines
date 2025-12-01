@@ -44,14 +44,6 @@
 	--line-height-paragraph-small: calc(20 / 14);
 	--line-height-paragraph-xsmall: calc(16 / 12);
 
-<<<<<<< Updated upstream
-	--line-height-paragraph-large: calc(18rem / 16);
-	--line-height-paragraph-medium: calc(16rem / 16);
-	--line-height-paragraph-small: calc(14rem / 16);
-	--line-height-paragraph-xsmall: calc(12rem / 16);
-
-=======
->>>>>>> Stashed changes
 	--line-height: var(--line-height-paragraph-medium);
 
 	/* Font */
@@ -72,14 +64,6 @@
 	--font-paragraph-small: 400 var(--font-size-paragraph-small)/var(--line-height-paragraph-small) var(--font-family);
 	--font-paragraph-xsmall: 400 var(--font-size-paragraph-xsmall)/var(--line-height-paragraph-xsmall) var(--font-family);
 
-<<<<<<< Updated upstream
-	--font-paragraph-large: 400 var(--font-size-paragraph-large)/var(--line-height-paragraph-large) var(--font-family);
-	--font-paragraph-medium: 400 var(--font-size-paragraph-medium)/var(--line-height-paragraph-medium) var(--font-family);
-	--font-paragraph-small: 400 var(--font-size-paragraph-small)/var(--line-height-paragraph-small) var(--font-family);
-	--font-paragraph-xsmall: 400 var(--font-size-paragraph-xsmall)/var(--line-height-paragraph-xsmall) var(--font-family);
-
-=======
->>>>>>> Stashed changes
 	--font: var(--font-paragraph-medium);
 
 	/* Letter spacing */
