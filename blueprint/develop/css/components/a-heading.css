@@ -3,31 +3,27 @@
 	text-wrap-style: balance;
 }
 
-h1.a-heading,
+.a-heading:where(h1),
 .a-heading[data-size="xxlarge"] {
 	font: var(--font-heading-xxlarge);
 }
-h2.a-heading,
+.a-heading:where(h2),
 .a-heading[data-size="xlarge"] {
 	font: var(--font-heading-xlarge);
 }
-h3.a-heading,
+.a-heading:where(h3),
 .a-heading[data-size="large"] {
 	font: var(--font-heading-large);
 }
-h4.a-heading,
+.a-heading:where(h4),
 .a-heading[data-size="medium"] {
 	font: var(--font-heading-medium);
 }
-h5.a-heading,
+.a-heading:where(h5),
 .a-heading[data-size="small"] {
 	font: var(--font-heading-small);
 }
-<<<<<<< Updated upstream
-h5.a-heading,
-=======
-h6.a-heading,
->>>>>>> Stashed changes
+.a-heading:where(h6),
 .a-heading[data-size="xsmall"] {
 	font: var(--font-heading-xsmall);
 }

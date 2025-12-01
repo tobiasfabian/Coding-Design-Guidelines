@@ -1,6 +1,6 @@
 .a-button {
-	--_padding-block: var(--space-200);
-	--_padding-inline: var(--space-300);
+	--_padding-block: var(--size-200);
+	--_padding-inline: var(--size-300);
 
 	padding-inline: var(--_padding-inline);
 	padding-block: var(--_padding-block);
@@ -12,8 +12,8 @@
 	}
 
 	&[data-size="small"] {
-		--_padding-block: var(--space-100);
-		--_padding-inline: var(--space-200);
+		--_padding-block: var(--size-100);
+		--_padding-inline: var(--size-200);
 
 		font: var(--font-label-small);
 	}

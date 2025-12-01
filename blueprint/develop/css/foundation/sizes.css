@@ -1,30 +1,36 @@
 /**
  * Each size should divide by 4.
  */
-
 :root {
 	/* Sizes */
-	--space-000: 0;
-	--space-050: calc(2rem / 16);
-	--space-100: calc(4rem / 16);
-	--space-200: calc(8rem / 16);
-	--space-300: calc(12rem / 16);
-	--space-400: calc(16rem / 16);
-	--space-500: calc(24rem / 16);
-	--space-600: calc(32rem / 16);
-	--space-700: calc(40rem / 16);
-	--space-800: calc(52rem / 16);
-	--space-900: calc(64rem / 16);
-	--space-1000: calc(96rem / 16);
+	--size-0: 0;
+	--size-50: calc(2rem / 16);
+	--size-100: calc(4rem / 16);
+	--size-200: calc(8rem / 16);
+	--size-300: calc(12rem / 16);
+	--size-400: calc(16rem / 16);
+	--size-500: calc(24rem / 16);
+	--size-600: calc(32rem / 16);
+	--size-700: calc(40rem / 16);
+	--size-800: calc(52rem / 16);
+	--size-900: calc(64rem / 16);
+	--size-1000: calc(96rem / 16);
 
 	/* Grid */
-	--gap-inline: var(--space-700);
-	--gap-block: var(--space-700);
+	--gap-inline: var(--size-700);
+	--gap-block: var(--size-700);
+
+	/* Paddings */
+	--padding-inline-body: var(--size-400);
 
 	/* Widths */
 	--max-width: calc(1600rem / 16);
 	--max-width-content: calc(1080rem / 16);
 	--max-width-text: calc(680rem / 16);
+
+	/* Z-indexes */
+	--z-index-dialog: 600;
+	--z-index-popopver: 700;
 
 	/* Borders */
 	/* Use px values instead of rem */

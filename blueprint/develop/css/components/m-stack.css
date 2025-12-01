@@ -1,6 +1,6 @@
 .m-stack {
 	display: flex;
-	column-gap: var(--space-200);
+	column-gap: var(--size-200);
 
 	&[data-justify="center"] {
 		justify-content: center;
