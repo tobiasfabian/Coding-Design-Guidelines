@@ -157,11 +157,6 @@ The rules inside of a *Block*/*Element* could be very long that’s why a specif
 - [Adjacent sibling combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator) in combination with *Child combinator*   
 	This is used to define how elements behave against other elements. E.g. the `margin-block-start` of a `p` element after a `h1` element. (See [The Stack: Every Layout](https://every-layout.dev/layouts/stack/))  
 	`> h1 + p` 
-- *Modifiers* ([Element with Block Modifier](#element-with-block-modifier))  
-	`.m-alert-banner[data-theme="negative"] &`
-- *Modifiers*  
-	`&[data-theme="negative"]`
-- `@supports` rules
 - [Pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)  
 	`:hover`, `:focus-visible`
 - *Adjacent sibling combinator* for the *Block*/*Element* itself  
@@ -170,6 +165,11 @@ The rules inside of a *Block*/*Element* could be very long that’s why a specif
 - *Adjacent sibling combinator* for the *Block*/*Element* against other *Blocks*/*Elements*  
 	This is used to define how this *Block*/*Element* behaves against other *Blocks*/*Elements*.  
 	`.m-form + &`
+- *Modifiers*  
+	`&[data-theme="negative"]`
+- *Modifiers* ([Element with Block Modifier](#element-with-block-modifier))  
+	`.m-alert-banner[data-theme="negative"] &`
+- `@supports` rules
 - `@media` queries  
 	`(min-width: …)` before `not all and (min-width: …)`
 
@@ -181,24 +181,38 @@ The rules inside of a *Block*/*Element* could be very long that’s why a specif
 		…
 	}
 	
-	--var-lorem: …;
+	--_var-lorem: …;
 
-	padding: 1rem;
-	border: 2px solid var(--color-alert);
+	border: var(--border-width-medium) solid var(--color-alert);
+	padding: var(--size-400);
 	animation-name: pulse;
 	…
 	
 	> h2 {
-		font-size: …;
+		font: var(--font-heading-large);
 	}
 	> p {
 		…
 	}
 	
 	> h2 + p {
-		margin-block-start: 1rem;
+		margin-block-start: var(--size-400);
+	}
+		
+	&:focus-inside {
+		> h2 {
+			…
+		}
 	}
 	
+	& + & {
+		margin-block-start: var(--size-400);
+	}
+	
+	.m-form + & {
+		…
+	}
+
 	&[data-theme="negative"] {
 		…
 	}
@@ -211,24 +225,10 @@ The rules inside of a *Block*/*Element* could be very long that’s why a specif
 		}
 	}
 	
-	&:focus-inside {
-		> h2 {
-			…
-		}
-	}
-
-	& + & {
-		margin-block-start: 1rem;
-	}
-	
-	.m-form + & {
-		…
-	}
-	
 	@media (min-width: …) {
 		…
 	}
-	@media not all and (min-width: …) {
+	@media not (min-width: …) {
 		…
 	}
 }
@@ -276,8 +276,8 @@ Use `rem` unit for media and container queries. [^1]
 
 There are about 400 CSS properties. To quickly find the right property there is the following order. The list is incomplete. Missing properties can be sorted accordingly.
 
-- variables
-	`--var-*`
+- local variables  
+	e.g. `--_padding-inline`
 - generated content  
 	`content`
 - appearance  
@@ -285,30 +285,30 @@ There are about 400 CSS properties. To quickly find the right property there is 
 	- clipping  
 		`clip-path`, `overflow`
 - positioning
-		- grid/flex (Properties for grid/flex item)  
+	- grid/flex (Properties for grid/flex item)  
 			`grid-[row|column]-[start|end]`  
 			`flex-base`, `flex-shrink`, `flex-grow`  
 			`justify-self`, `align-self`
-		- inset/margin  
+	- inset/margin  
 			`inset`, `z-index`, `margin`
-		- size  
+	- size  
 			`box-sizing`, `inline|block-size` `width`, `height`, `[min|max]-[[inline|block]-size|width|height]`,
-		- `translate`
+	- `translate`
 - border  
 	`box-shadow`, `border`, `border-radius`, `outline`
 - padding  
 	`padding-[inline|block]`
 - content  
-		- grid/flex (Properties for grid/flex container)   
-			`grid-template-[columns|rows]`, `[justify|align]-[content|items]`, `gap`
-		- lists/columns/table  
-			`list-style`, `columns`, `border-collapse`
-		- typography  
-			`text-[align|transform|...]`  
-			`line-height`, `letter-spacing`  
-			`font-[size|weight|...]`  
-			`white-space`, `hyphens`  
-			`color`
+	- grid/flex (Properties for grid/flex container)   
+	`grid-template-[columns|rows]`, `[justify|align]-[content|items]`, `gap`
+	- lists/columns/table  
+	`list-style`, `columns`, `border-collapse`
+	- typography  
+	`text-[align|transform|...]`  
+	`line-height`, `letter-spacing`  
+	`font-[size|weight|...]`  
+	`white-space`, `hyphens`  
+	`color`
 - background  
 	`background-[image|color|...]`, `backdrop-filter`
 - animation  
