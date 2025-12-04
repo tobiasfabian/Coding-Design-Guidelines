@@ -183,7 +183,7 @@ The rules inside of a *Block*/*Element* could be very long that’s why a specif
 	
 	--_var-lorem: …;
 
-	border: var(--border-width-medium) solid var(--color-alert);
+	border: var(--border-width-medium) solid var(--color-negative);
 	padding: var(--size-400);
 	animation-name: pulse;
 	…
