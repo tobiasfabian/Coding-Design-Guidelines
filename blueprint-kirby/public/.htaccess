@@ -76,6 +76,7 @@ SetEnvIf Authorization "(.+)" HTTP_AUTHORIZATION=$1
 	AddOutputFilterByType DEFLATE text/javascript
 	AddOutputFilterByType DEFLATE application/json
 	AddOutputFilterByType DEFLATE application/javascript
+	AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>
 
 # set security headers in all responses
