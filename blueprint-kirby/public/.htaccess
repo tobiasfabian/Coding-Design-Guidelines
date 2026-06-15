@@ -40,6 +40,7 @@
 	#
 	# RewriteBase /
 
+	# Kirby Staticache Plugin
 	RewriteCond %{DOCUMENT_ROOT}/site/cache/%{SERVER_NAME}/pages/%{REQUEST_URI}/index.html -f
 	RewriteRule ^(.*) %{DOCUMENT_ROOT}/site/cache/%{SERVER_NAME}/pages/%{REQUEST_URI}/index.html [END]
 
