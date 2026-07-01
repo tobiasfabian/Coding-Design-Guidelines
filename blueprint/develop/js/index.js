@@ -1,4 +1,4 @@
-import AField from './components/a-field';
+import AField from './components/a-field.js';
 
 const aFields = [];
 

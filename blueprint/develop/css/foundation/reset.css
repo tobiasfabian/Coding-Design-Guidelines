@@ -42,7 +42,7 @@ img, picture, svg, video, canvas, audio, iframe, embed, object, summary {
 	display: block;
 }
 
-img, picture, svg {
+img, picture, video, svg {
 	max-inline-size: 100%;
 	block-size: auto;
 }

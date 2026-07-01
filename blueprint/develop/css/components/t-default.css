@@ -1,6 +1,0 @@
-/* Template components can only apply to the body element */
-.t-default {
-	display: flex;
-	flex-direction: column;
-	align-content: start;
-}

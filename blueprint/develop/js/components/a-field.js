@@ -4,7 +4,7 @@ class AField extends AbstractElement {
 	/** @param {HTMLDivElement} element */
 	constructor(element) {
 		// super
-		super(element);
+	  super(element);
 
 		// variables
 		const { theme } = element.dataset;

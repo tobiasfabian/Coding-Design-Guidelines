@@ -10,6 +10,8 @@
 /* HELPER/DEBUG */
 @import 'foundation/DEBUG.css';
 
+@import 'components/root.css';
+
 /* Atoms */
 @import 'components/a-button.css';
 @import 'components/a-heading.css';
@@ -32,4 +34,4 @@
 /* @import 'components/o-nav-main.css'; */
 
 /* Templates */
-@import 'components/t-default.css';
+/* … */
