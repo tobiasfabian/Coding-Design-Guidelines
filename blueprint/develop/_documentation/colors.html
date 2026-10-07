@@ -10,39 +10,39 @@
 				display: grid;
 				grid-template-columns: repeat(auto-fill, minmax(20ch, 1fr));
 				font: var(--font-label-xsmall);
-				gap: 2rem;
+				gap: var(--size-400, 1rem);
 			}
 			.color {
 				display: flex;
 				flex-direction: column;
-				gap: 1rem;
+				gap: var(--size-200, 0.5rem);
 				text-wrap-style: balance;
+				color: var(--color-content-secondary);
 
 				&::before {
 					content: '';
 					inline-size: 50px;
 					border-radius: 50%;
 					aspect-ratio: 1 / 1;
-					border: 1px solid black;
+					border: 1px solid currentColor;
 					background-color: var(--color);
 				}
 			}
 		</style>
 	</head>
 	<body>
-		<main class="m-stack" data-size="large">
+		<main class="m-stack" data-size="xxxlarge">
 			<a href=".">← Overview</a>
 			<h1 class="a-heading">Colors</h1>
-			<div class="colors">
-			</div>
 		</main>
 
 		<script>
 			(async () => {
-				const colorsElement = document.querySelector('.colors');
+				const mainElement = document.querySelector('main');
 
 				async function getAllCSSVariables() {
 					const allCSSVars = new Set();
+					const stylesheetHrefs = new Set();
 
 					function processRules(rules) {
 						for (const rule of rules) {
@@ -66,6 +66,9 @@
 					}
 
 					function processStylesheet(sheet) {
+						if (sheet.href) {
+							stylesheetHrefs.add(sheet.href);
+						}
 						try {
 							if (sheet.cssRules) {
 								processRules(sheet.cssRules);
@@ -79,17 +82,71 @@
 						processStylesheet(sheet);
 					}
 
-					return Array.from(allCSSVars);
+					return {
+						cssVars: Array.from(allCSSVars),
+						stylesheetHrefs: Array.from(stylesheetHrefs),
+					};
 				}
 
-				const sortedCssColorVars = await getAllCSSVariables();
+				// The CSSOM drops comments, so the raw CSS is fetched to find the comment preceding each variable
+				async function getCommentsByCSSVariable(stylesheetHrefs) {
+					const commentsByCSSVar = new Map();
 
-				sortedCssColorVars.forEach((colorName) => {
-					colorsElement.appendChild(Object.assign(document.createElement('div'), {
-						textContent: colorName,
-						className: 'color',
-						style: `--color: var(${colorName})`
-					}))
+					for (const href of stylesheetHrefs) {
+						try {
+							const cssText = await (await fetch(href)).text();
+							let comment = null;
+							for (const match of cssText.matchAll(/\/\*([\s\S]*?)\*\/|(--color[\w-]*)\s*:/g)) {
+								if (match[1] !== undefined) {
+									comment = match[1].trim();
+								} else if (!commentsByCSSVar.has(match[2])) {
+									commentsByCSSVar.set(match[2], comment);
+								}
+							}
+						} catch (e) {
+							console.warn('Cannot fetch stylesheet:', href);
+						}
+					}
+
+					return commentsByCSSVar;
+				}
+
+				function getColorGroupName(colorName) {
+					const name = colorName.replace('--color-', '').split('-')[0];
+					return ['black', 'white'].includes(name) ? 'gray' : name;
+				}
+
+				const { cssVars, stylesheetHrefs } = await getAllCSSVariables();
+				const commentsByCSSVar = await getCommentsByCSSVariable(stylesheetHrefs);
+
+				const sections = Map.groupBy(cssVars, (colorName) => commentsByCSSVar.get(colorName) ?? 'Other');
+
+				sections.forEach((sectionColorNames, sectionName) => {
+					const sectionElement = Object.assign(document.createElement('section'), {
+						className: 'm-stack',
+					});
+					sectionElement.dataset.size = 'xxlarge';
+					sectionElement.appendChild(Object.assign(document.createElement('h2'), {
+						textContent: sectionName,
+						className: 'a-heading',
+					}));
+
+					Map.groupBy(sectionColorNames, getColorGroupName).forEach((colorNames) => {
+						const colorsElement = Object.assign(document.createElement('div'), {
+							className: 'colors',
+						});
+						colorNames.forEach((colorName) => {
+							colorsElement.appendChild(Object.assign(document.createElement('div'), {
+								textContent: colorName,
+								className: 'color',
+								style: `--color: var(${colorName})`
+							}));
+						});
+
+						sectionElement.appendChild(colorsElement);
+					});
+
+					mainElement.appendChild(sectionElement);
 				});
 			})();
 

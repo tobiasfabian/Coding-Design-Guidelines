@@ -1,9 +1,10 @@
 /* Naming of colors and fonts inspired by Uber Base (https://base.uber.com/6d2425e9f/p/8898fb-color-legacy/b/065744) */
 
 :root {
-	/* Foundation */
+	/* Foundation colors */
 	--color-white: hsl(0deg 0% 100%);
 	--color-gray-20: hsl(0deg 0% 98%);
+	--color-gray-50: hsl(0deg 0% 95%);
 	--color-gray-100: hsl(0deg 0% 90%);
 	--color-gray-200: hsl(0deg 0% 80%);
 	--color-gray-300: hsl(0deg 0% 70%);
@@ -49,12 +50,12 @@
 	--color-green-800: hsl(100deg 100% 20%);
 	--color-green-900: hsl(100deg 100% 10%);
 
-	/* Functional Colors */
+	/* Functional colors */
 	--color-negative: var(--color-red-400);
 	--color-warning: var(--color-yellow-400);
 	--color-positive: var(--color-green-400);
 
-	/* Core Colors */
+	/* Core colors */
 	--color-background-primary: var(--color-white);
 	--color-background-secondary: var(--color-gray-50);
 	--color-background-tertiary: var(--color-gray-100);
@@ -77,12 +78,12 @@
 	              0 2px 30px -10px hsl(0deg 0% 0% / 10%);
 
 	@media (prefers-color-scheme: dark) {
-		/* Functional Colors */
+		/* Functional colors */
 		--color-negative: var(--color-red-600);
 		--color-warning: var(--color-yellow-600);
 		--color-positive: var(--color-green-600);
 
-		/* Core Colors */
+		/* Core colors */
 		--color-background-primary: var(--color-gray-950);
 		--color-background-secondary: var(--color-gray-900);
 		--color-background-tertiary: var(--color-gray-800);
@@ -103,12 +104,12 @@
 	[data-theme="dark"] {
 		/* same as @media (prefers-color-scheme: dark) */
 
-		/* Functional Colors */
+		/* Functional colors */
 		--color-negative: var(--color-red-600);
 		--color-warning: var(--color-yellow-600);
 		--color-positive: var(--color-green-600);
 
-		/* Core Colors */
+		/* Core colors */
 		--color-background-primary: var(--color-gray-950);
 		--color-background-secondary: var(--color-gray-900);
 		--color-background-tertiary: var(--color-gray-800);

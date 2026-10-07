@@ -14,9 +14,15 @@
 		gap: var(--size-100);
 	}
 	&[data-size="large"] {
-		gap: var(--size-400);
+		gap: var(--size-300);
 	}
 	&[data-size="xlarge"] {
+		gap: var(--size-400);
+	}
+	&[data-size="xxlarge"] {
 		gap: var(--size-600);
+	}
+	&[data-size="xxxlarge"] {
+		gap: var(--size-800);
 	}
 }
