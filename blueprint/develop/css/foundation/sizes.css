@@ -1,6 +1,7 @@
 /**
  * Each size should divide by 4.
  */
+
 :root {
 	/* Sizes */
 	--size-0: 0;

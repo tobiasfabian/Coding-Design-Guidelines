@@ -6,4 +6,17 @@
 	&[data-justify="center"] {
 		justify-content: center;
 	}
+
+	&[data-size="xsmall"] {
+		gap: var(--size-50);
+	}
+	&[data-size="small"] {
+		gap: var(--size-100);
+	}
+	&[data-size="large"] {
+		gap: var(--size-400);
+	}
+	&[data-size="xlarge"] {
+		gap: var(--size-600);
+	}
 }

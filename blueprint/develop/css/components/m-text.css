@@ -2,8 +2,12 @@
 	--_gap-paragraph: calc(var(--line-height-paragraph-medium) * 0.5em);
 
 	font: var(--font-paragraph-medium);
+	text-wrap-style: pretty;
 
 	/* Child elements */
+	> :where(h1, h2, h3, h4, h5, h6) {
+		text-wrap-style: balance;
+	}
 	> h1 {
 		font: var(--font-heading-xxlarge);
 	}

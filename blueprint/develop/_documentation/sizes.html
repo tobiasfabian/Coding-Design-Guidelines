@@ -9,17 +9,18 @@
 			.sizes {
 				display: grid;
 				font: var(--font-label-xsmall);
-				gap: 2rem;
+				gap: var(--size-400, 1rem);
 			}
 			.size {
 				display: flex;
 				flex-direction: column;
-				gap: 0.5rem;
+				gap: var(--size-200, 0.5rem);
 				text-wrap-style: balance;
+				color: var(--color-content-tertiary);
 
 				&::before {
 					content: '';
-					background: var(--color-black);
+					background: var(--color-content-primary);
 					inline-size: var(--size);
 					block-size: calc(4rem / 16);
 				}
@@ -27,7 +28,8 @@
 		</style>
 	</head>
 	<body>
-		<main class="m-stack">
+		<main class="m-stack" data-size="large">
+			<a href=".">← Overview</a>
 			<h1 class="a-heading">Sizes</h1>
 
 			<div class="sizes">
