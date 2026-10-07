@@ -1,5 +1,4 @@
 import esbuild from "esbuild";
-import CssModulesPlugin from "esbuild-css-modules-plugin";
 
 const dev = process.argv.includes("--dev");
 
@@ -19,7 +18,6 @@ const options = {
 	minify: !dev,
 	sourcemap: true,
 	format: "esm",
-	plugins: [CssModulesPlugin()],
 	target: ["chrome109", "firefox140", "safari16.6"],
 	external: [
 		"fonts/*.woff",
