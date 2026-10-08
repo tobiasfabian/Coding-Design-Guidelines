@@ -1,6 +1,6 @@
 <?php
 /** @var \Kirby\Cms\Site $site */
-$legalPages = $legalPages ?? [];
+$legalPages ??= [];
 ?>
 <nav class="m-nav-legal" aria-label="Legal">
 	<ul>

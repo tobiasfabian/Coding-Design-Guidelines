@@ -3,7 +3,8 @@
 use Kirby\Cms\App;
 use Kirby\Filesystem\F;
 
-function hashedUrl($path) {
+function hashedUrl(string $path)
+{
 	$file = kirby()->roots()->index() . DIRECTORY_SEPARATOR . $path;
 	if (!option('tobiaswolf.hashed-url', true) || !file_exists($file)) {
 		return url($path);

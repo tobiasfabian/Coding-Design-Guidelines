@@ -4,16 +4,11 @@ const dev = process.argv.includes("--dev");
 
 const options = {
 	entryPoints: [
-		{
-			in: "develop/js/index.js",
-			out: "js/index",
-		},
-		{
-			in: "develop/css/index.css",
-			out: "css/index",
-		},
+		"develop/css/*.css",
+		"develop/js/*.js",
 	],
 	outdir: "public/assets",
+	outbase: "develop",
 	bundle: true,
 	minify: !dev,
 	sourcemap: true,
