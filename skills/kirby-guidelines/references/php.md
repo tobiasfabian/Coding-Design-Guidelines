@@ -165,7 +165,7 @@ class Site extends \Kirby\Cms\Site {}
 
 - Put all `@method` lines in one docblock. A second docblock replaces the first, and the IDE loses those methods.
 - For field methods, leave out the first `$field` parameter. Kirby passes it in; callers write `$page->date()->toIntlDate('d. MMMM y')`.
-- Keep stub files out of php-cs. The fixer shortens `extends \Kirby\Cms\Site` to `extends Site`, so the class extends itself. The `.php-cs-fixer.dist.php` of `blueprint-kirby` already excludes `*.stub.php` and checks only plugins registered as `site/*` or `tobiaswolf/*`; copy it into older projects.
+- Keep stub files out of php-cs. The fixer shortens `extends \Kirby\Cms\Site` to `extends Site`, so the class extends itself. The `.php-cs-fixer.dist.php` of `blueprint-kirby` already excludes `*.stub.php` and checks only plugins registered as `site/*`; copy it into older projects.
 - Page models are their own classes, so their content fields are declared on the model with `@method Field …` (see Models).
 
 ## Feature plugins
