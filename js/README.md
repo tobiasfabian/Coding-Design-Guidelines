@@ -2,9 +2,9 @@
 
 ## Compiling
 
-JavaScript is written in plain, modern JavaScript (not Typescript). Theoretically the code could run by modern browser without compiling. In practice not every browser in use understands all modern JavaScript. JavaScript code is compiled with Babel and bundled with webpack.
+JavaScript is written in plain, modern JavaScript (not TypeScript). In theory it could run in modern browsers without compiling. In practice not every browser in use understands all modern JavaScript, and npm modules have to be bundled anyway. JavaScript is bundled with [esbuild](https://esbuild.github.io) (`/develop/build.mjs`).
 
-By default `index.js` inside the JavaScript directory (`/develop/js/`) is compiled and bundled to (`/public/assets/js/`). If you want another JavaScript file to be compiled and bundled, you have to add this file to the `entry` option of the webpack configuration (`/webpack.config.js`).
+Every JavaScript file directly inside the JavaScript directory (`/develop/js/`), usually just `index.js`, is bundled to `/public/assets/js/`. For another bundle, for example one that only certain pages load, add another file there.
 
 ## Components
 
@@ -105,7 +105,7 @@ export default AField;
 
 ## Linting
 
-All JavaScript files are linted against the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
+All JavaScript files are linted with [ESLint](https://eslint.org) (`eslint.config.mjs`): the recommended rules plus tab indentation via `@stylistic`. Run `npx eslint develop/js`.
 
 ## JSDoc
 

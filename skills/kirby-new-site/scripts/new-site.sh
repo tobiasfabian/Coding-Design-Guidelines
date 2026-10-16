@@ -75,9 +75,6 @@ cat >> "$target/.gitignore" <<'EOF'
 
 # Basic auth for preview hosts, created on the server
 /.htpasswd
-
-# PHP CS Fixer
-/.php-cs-fixer.cache
 EOF
 
 echo "→ Replacing placeholders"

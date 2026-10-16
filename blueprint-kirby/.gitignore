@@ -57,3 +57,4 @@ Icon
 # ---------------
 
 /public/site/config/env.php
+/.php-cs-fixer.cache

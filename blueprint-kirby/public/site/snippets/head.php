@@ -11,7 +11,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title><?= $page->isHomePage() ? $site->title()->esc('attr') : $page->title()->esc('attr') . ' – ' . $site->title()->esc('attr') ?></title>
+	<title><?= $page->isHomePage() ? $site->title()->esc() : $page->title()->esc() . ' – ' . $site->title()->esc() ?></title>
 
 	<meta name="viewport" content="width=device-width">
 	<meta name="text-scale" content="scale">
