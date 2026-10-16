@@ -6,7 +6,7 @@
 		"build": "node ./develop/build.mjs;",
 		"dev": "node ./develop/build.mjs --dev;"
 	},
-	"author": "hello@tobiaswolf.me",
+	"author": "Tobias Wolf (https://tobiaswolf.me)",
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
 		"@stylistic/eslint-plugin": "^5.10.0",

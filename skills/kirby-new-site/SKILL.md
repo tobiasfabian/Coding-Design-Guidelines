@@ -31,7 +31,7 @@ What it does:
 
 - Copies the committed state of `blueprint-kirby`, with a real copy of `develop/` from `blueprint` (the starter only has a symlink there).
 - Leaves out `.htpasswd`, `.php-cs-fixer.cache` and Panel media, and adds the first two to `.gitignore`.
-- Replaces `example.com` and `example.local`, renames the test config to `config.<name>.test.php`, and adds `config.localDevServer` to `package.json`.
+- Replaces `example.com` and `example.test`, renames the test config to `config.<name>.test.php`, and adds `config.localDevServer` to `package.json`.
 - With `--local-dev-server`, it also adds the package and its npm scripts, plus an `.npmrc` with `allow-git=root`. Since npm 12, git dependencies are refused unless a project allows them.
 - Writes `env.php` with random `content.salt` and `cookie.key`. Never print these values.
 - Runs `git init`. Adds Kirby (latest stable tag) and staticache as shallow submodules, and makes `content/` its own repository, registered as a submodule with the local URL `./public/content`.
