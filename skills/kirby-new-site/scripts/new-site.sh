@@ -82,7 +82,7 @@ EOF
 
 echo "→ Replacing placeholders"
 
-perl -pi -e "s/example\.(local|test)/$testhost/g; s/example\.com/$domain/g" \
+perl -pi -e "s/example\.test/$testhost/g; s/example\.com/$domain/g" \
 	"$target/README.md" "$target/AGENTS.md" "$target/public/.htaccess"
 mv "$target/public/site/config/config.example.test.php" "$target/public/site/config/config.$testhost.php"
 
