@@ -6,6 +6,20 @@ Version 1.8.0
 - [Writing JavaScript](js/README.md)
 - [Writing CSS](css/README.md)
 - [Writing HTML](html/README.md)
+- [Kirby guidelines for agents](skills/kirby-guidelines/SKILL.md)
+
+
+## Agents
+
+`skills/kirby-guidelines` is an agent skill with the Kirby conventions: where PHP logic goes, naming, and a review checklist. Agents write PHP (mainly controllers and models) and review the frontend instead of writing it.
+
+To make the skill available in Claude Code, run this from the repository root:
+
+```bash
+ln -s "$PWD/skills/kirby-guidelines" ~/.claude/skills/kirby-guidelines
+```
+
+New Kirby sites get an `AGENTS.md` (plus `CLAUDE.md`) from `blueprint-kirby`, which points agents to the skill.
 
 
 ## Atomic Design
