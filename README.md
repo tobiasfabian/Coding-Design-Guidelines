@@ -8,6 +8,7 @@ Version 1.8.0
 - [Writing HTML](html/README.md)
 - [Kirby guidelines for agents](skills/kirby-guidelines/SKILL.md)
 - [Kirby launch check](skills/kirby-launch-check/SKILL.md)
+- [New Kirby site](skills/kirby-new-site/SKILL.md)
 
 
 ## Agents
@@ -16,6 +17,7 @@ Version 1.8.0
 
 - `kirby-guidelines`: the Kirby conventions (where PHP logic goes, naming) and a review checklist. Agents write PHP (mainly controllers and models) and review the frontend instead of writing it.
 - `kirby-launch-check`: a go-live and audit checklist (config, secrets, security, SEO, caching, privacy) that reports problems without fixing them.
+- `kirby-new-site`: sets up a new Kirby project from `blueprint-kirby` and `blueprint`. Its script `scripts/new-site.sh` copies the starters, replaces placeholders, writes `env.php` with fresh secrets and creates the git repository, with Kirby, staticache and a local `content/` repository as submodules.
 
 To make a skill available in Claude Code, link it from the repository root, e.g.:
 
