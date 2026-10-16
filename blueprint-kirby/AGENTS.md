@@ -1,6 +1,6 @@
 # example.com
 
-Kirby site, built from Tobias Wolf's `blueprint-kirby` starter.
+Kirby site, built from the `blueprint-kirby` starter.
 
 ## Conventions
 
@@ -10,7 +10,7 @@ https://github.com/tobiasfabian/Coding-Design-Guidelines/tree/main/skills/kirby-
 ## Roles
 
 - **Agents write PHP**, preferably in `public/site/controllers` and `public/site/models`. Config, collections and plugins when the task needs them.
-- **Tobias writes the frontend**: templates, snippets, CSS, JS. Don't edit these files unless he asks. Review them, point out mistakes and suggest improvements.
+- **The user writes the frontend**: templates, snippets, CSS, JS. Don't edit these files unless asked. Review them, point out mistakes and suggest improvements.
 
 ## Layout
 

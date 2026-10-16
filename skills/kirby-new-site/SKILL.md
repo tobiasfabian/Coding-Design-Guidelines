@@ -1,6 +1,6 @@
 ---
 name: kirby-new-site
-description: Sets up a new Kirby website project from Tobias Wolf's starters (blueprint-kirby plus the develop/ frontend from blueprint) — copies them, replaces the placeholders, writes env.php with fresh secrets, creates the git repository with Kirby, staticache and content/ as submodules, and runs the first build. Use this skill whenever the user wants to start, create or set up a new Kirby site or project ("neues Projekt", "neue Website aufsetzen", "Kirby-Projekt für example.com anlegen"), even if they don't mention the starter.
+description: Sets up a new Kirby website project from the starters in this repository (blueprint-kirby plus the develop/ frontend from blueprint) — copies them, replaces the placeholders, writes env.php with fresh secrets, creates the git repository with Kirby, staticache and content/ as submodules, and runs the first build. Use this skill whenever the user wants to start, create or set up a new Kirby site or project ("neues Projekt", "neue Website aufsetzen", "Kirby-Projekt für example.com anlegen"), even if they don't mention the starter.
 ---
 
 # New Kirby site
@@ -42,6 +42,6 @@ The script doesn't commit anything in the project. The one exception is the cont
 ## Afterwards
 
 - **Several languages**: add `'languages' => true` to `config.php` and a file per language in `site/languages/` (or create the languages in the Panel).
-- **Check it renders**: start the local-dev-server, or run `php -S 127.0.0.1:8000 -t public public/kirby/router.php`, then request `/`, `/sitemap.xml` and `/robots.txt`. Tobias creates the first Panel account himself.
+- **Check it renders**: start the local-dev-server, or run `php -S 127.0.0.1:8000 -t public public/kirby/router.php`, then request `/`, `/sitemap.xml` and `/robots.txt`. The user creates the first Panel account.
 - **Hand over** the to-do list the script prints at the end (server paths, `.connect-to-server`, `env.php` on the server, license, fonts, logo).
-- **Offer the first commit**, and make it only if Tobias agrees.
+- **Offer the first commit**, and make it only if the user agrees.

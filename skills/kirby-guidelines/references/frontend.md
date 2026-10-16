@@ -1,6 +1,6 @@
 # Frontend conventions
 
-Tobias writes these files himself. Use this page to review them and to make suggestions. The full guides are `css/README.md`, `js/README.md` and `html/README.md` in [Coding-Design-Guidelines](https://github.com/tobiasfabian/Coding-Design-Guidelines).
+The user writes these files. Use this page to review them and to make suggestions. The full guides are `css/README.md`, `js/README.md` and `html/README.md` in [Coding-Design-Guidelines](https://github.com/tobiasfabian/Coding-Design-Guidelines).
 
 ## Templates
 

@@ -61,4 +61,4 @@ Use only `curl -sI` / `curl -s` (GET or HEAD):
 - `/sitemap.xml`, `/robots.txt` and `/site.webmanifest` answer 200 with the right content type.
 - The second request to a page comes from the static cache: the HTML ends with `<!-- static … -->`, unless the comment is turned off.
 - No headers reveal versions (`X-Powered-By` with the PHP version).
-- If the project has `unlighthouse`, run it, or suggest Tobias run it, and add the scores to the report.
+- If the project has `unlighthouse`, run it, or suggest the user run it, and add the scores to the report.

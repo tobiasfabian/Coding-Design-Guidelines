@@ -5,14 +5,14 @@ description: Go-live and audit checklist for Kirby CMS websites — config, secr
 
 # Kirby launch check
 
-Checks a Kirby site before launch, or audits an existing one. The checks come from mistakes that came up again and again in Tobias's sites. Conventions (where code goes, naming) are in the **kirby-guidelines** skill; this skill only checks.
+Checks a Kirby site before launch, or audits an existing one. The checks come from mistakes that came up again and again in real Kirby sites. Conventions (where code goes, naming) are in the **kirby-guidelines** skill; this skill only checks.
 
 ## How to run it
 
 1. **Find your way around.** Kirby version, docroot (`public/` or root), host configs (`site/config/config.*.php`), how the site is deployed (`scripts/rsync-excludes`, `.connect-to-server`, git hooks).
 2. **Check the repository** against [references/checklist.md](references/checklist.md). Use `git ls-files` for "is it in git", and read the files themselves instead of guessing.
 3. **Check the live site** if the user gives a URL (staging or production): only `GET`/`HEAD` requests with `curl`, as listed in the checklist. Never log in, never send forms.
-4. **Report**, then stop. Don't fix anything until Tobias says so. After that, PHP and config fixes are yours; templates, snippets, CSS and JS stay suggestions unless he asks you to edit them.
+4. **Report**, then stop. Don't fix anything until the user says so. After that, PHP and config fixes are yours; templates, snippets, CSS and JS stay suggestions unless the user asks you to edit them.
 
 Never put secret values in the report (salts, keys, passwords, tokens). Say "gesetzt", "fehlt" or "im Repo", nothing more.
 

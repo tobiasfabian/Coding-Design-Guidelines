@@ -1,16 +1,16 @@
 ---
 name: kirby-guidelines
-description: Tobias Wolf's conventions for Kirby CMS websites — where PHP logic belongs (controllers, models, config extensions, site/<name> plugins), Atomic Design and BEM naming, data-attribute modifiers, and the getkirby/php-cs style. Use this skill whenever you work in a Kirby project (a repo with site/templates, site/blueprints or a kirby/ folder): writing or changing controllers, models, collections, config, hooks, routes, API routes or plugins, reviewing code, or giving feedback on templates, snippets, blueprints, CSS or JS. Also use it when starting a new site from the blueprint-kirby starter, even if the user doesn't mention conventions.
+description: Conventions for Kirby CMS websites — where PHP logic belongs (controllers, models, config extensions, site/<name> plugins), Atomic Design and BEM naming, data-attribute modifiers, and the getkirby/php-cs style. Use this skill whenever you work in a Kirby project (a repo with site/templates, site/blueprints or a kirby/ folder): writing or changing controllers, models, collections, config, hooks, routes, API routes or plugins, reviewing code, or giving feedback on templates, snippets, blueprints, CSS or JS. Also use it when starting a new site from the blueprint-kirby starter, even if the user doesn't mention conventions.
 ---
 
 # Kirby guidelines
 
-These conventions come from Tobias's Kirby sites. They say *where things go and how they are named*. Formatting is left to [getkirby/php-cs](https://github.com/getkirby/php-cs). If a project deviates on purpose, follow the project and mention the deviation.
+These conventions come from a series of real Kirby sites. They say *where things go and how they are named*. Formatting is left to [getkirby/php-cs](https://github.com/getkirby/php-cs). If a project deviates on purpose, follow the project and mention the deviation.
 
 ## Roles
 
 - **You write PHP**, mainly in `site/controllers` and `site/models`. Collections, config, hooks, routes and plugins when the task needs them.
-- **Tobias writes the frontend**: templates, snippets, HTML, CSS, JS. Don't edit these files unless he asks. Support him instead: list the variables a controller provides, point out mistakes, suggest smart additions (a short code example in the chat is welcome).
+- **The user writes the frontend**: templates, snippets, HTML, CSS, JS. Don't edit these files unless asked. Support the user instead: list the variables a controller provides, point out mistakes, suggest smart additions (a short code example in the chat is welcome).
 - **Blueprints**: only when the task needs new fields. Say which fields you added.
 - **Never touch** `kirby/`, `content/`, third-party plugins in `site/plugins/` or compiled assets (`public/assets/`).
 
@@ -22,13 +22,13 @@ Answer in the user's language (usually German).
 2. **Place the code** according to the table below.
 3. **Write it.** Details and examples: [references/php.md](references/php.md).
 4. **Check it.** `php -l` on changed files. Run `composer fix` if the project has that script. Render the page if a dev server is running.
-5. **Hand over.** Say what changed, and list the variables the template now gets (name, type, meaning) so Tobias can write the markup.
+5. **Hand over.** Say what changed, and list the variables the template now gets (name, type, meaning) so the user can write the markup.
 
 ## Review mode
 
 - Check PHP against this file and [references/php.md](references/php.md), and the frontend against [references/frontend.md](references/frontend.md).
 - Report first, don't fix. Group findings as **Fehler** (bugs, security), **Abweichung** (breaks a convention) and **Vorschlag** (useful additions). One line each, with `file:line`.
-- Once Tobias agrees, you may apply PHP fixes. Frontend fixes stay suggestions unless he asks you to edit.
+- Once the user agrees, you may apply PHP fixes. Frontend fixes stay suggestions unless the user asks you to edit.
 
 ## Where things go
 

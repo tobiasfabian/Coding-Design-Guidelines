@@ -180,7 +180,7 @@ site/plugins/contact/
 └── translations/
 ```
 
-The plugin brings everything the feature needs: API routes, options, hooks, blueprints, translations. Its snippets, CSS and JS still belong to Tobias.
+The plugin brings everything the feature needs: API routes, options, hooks, blueprints, translations. Its snippets, CSS and JS still belong to the user.
 
 - **Options** get defaults in the plugin (`'options' => ['apiKey' => null]`) and are read with `option('site.contact.apiKey')`. Secrets are set in `env.php` as `'site.contact.apiKey' => '…'`.
 - **Cache**: `'options' => ['cache' => true]` gives the plugin its own cache, `kirby()->cache('site.contact')`.
