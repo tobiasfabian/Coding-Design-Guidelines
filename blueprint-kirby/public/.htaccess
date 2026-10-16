@@ -5,7 +5,7 @@
 	Require valid-user
 </IF>
 
-# Kirby .htaccess with additions by hello@tobiaswolf.me
+# Kirby .htaccess with additions by Tobias Wolf (https://tobiaswolf.me)
 # revision 2023-07-22 (2023-08-07)
 
 # rewrite rules
@@ -115,7 +115,7 @@ SetEnvIf Authorization "(.+)" HTTP_AUTHORIZATION=$1
 
 # Make sure cache gets revalidated for JavaScript and CSS files
 <FilesMatch ".(js|mjs|css)$">
-	<If "%{HTTP_HOST} in {'example.local' , 'preview.example.com'}">
+	<If "%{HTTP_HOST} in {'example.test' , 'preview.example.com'}">
 		ExpiresActive Off
 		Header set Cache-Control "no-cache"
 	</If>
