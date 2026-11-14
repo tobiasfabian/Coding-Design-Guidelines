@@ -1,28 +1,32 @@
 <?php
 
+use Kirby\Cms\Page;
 use Kirby\Cms\Response;
+
+/**
+ * Renders a virtual page as content representation,
+ * so the pages cache stores it as e.g. sitemap.xml
+ */
+$representation = function (string $slug, string $contentType, string $mime): Response {
+	$page = new Page([
+		'slug' => $slug,
+		'template' => $slug,
+	]);
+	return new Response($page->render([], $contentType), $mime);
+};
 
 return [
 	[
 		'pattern' => 'site.webmanifest',
-		'action' => function (): Response {
-			$content = snippet('routes/manifest', ['site' => site()], true);
-			return new Response($content, 'application/manifest+json');
-		},
+		'action' => fn () => $representation('site', 'webmanifest', 'application/manifest+json'),
 	],
 	[
 		'pattern' => 'robots.txt',
-		'action' => function (): Response {
-			$content = snippet('routes/robots', ['kirby' => kirby()], true);
-			return new Response($content, 'text/plain');
-		},
+		'action' => fn () => $representation('robots', 'txt', 'text/plain'),
 	],
 	[
 		'pattern' => 'sitemap.xml',
 		'language' => '*', // allow sitemap for each language
-		'action'  => function (): Response {
-			$content = snippet('routes/sitemap', ['site' => site()], true);
-			return new Response($content, 'application/xml');
-		},
+		'action' => fn () => $representation('sitemap', 'xml', 'application/xml'),
 	],
 ];

@@ -1,0 +1,22 @@
+.a-space {
+	margin-block-start: var(--size-400);
+
+	&[data-size="xsmall"] {
+		margin-block-start: var(--size-200);
+	}
+	&[data-size="small"] {
+		margin-block-start: var(--size-300);
+	}
+	&[data-size="large"] {
+		margin-block-start: var(--size-500);
+	}
+	&[data-size="xlarge"] {
+		margin-block-start: var(--size-600);
+	}
+	&[data-size="xxlarge"] {
+		margin-block-start: var(--size-800);
+	}
+	&[data-size="xxxlarge"] {
+		margin-block-start: var(--size-1000);
+	}
+}

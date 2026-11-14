@@ -1,6 +1,0 @@
-.o-article {
-	align-self: center;
-	/* margin-block-start: 20px; */
-	max-width: var(--max-width-content);
-	padding-inline: var(--gap-inline);
-}

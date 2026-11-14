@@ -1,0 +1,37 @@
+type: group
+fields:
+  heading:
+    extends: fields/writer-inline
+    autofocus: true
+    label: false
+    marks: false
+    required: true
+    placeholder: field.blocks.heading.placeholder
+    width: 8/12
+    help: |
+      Jede Seite benötigt als zuerst eine H1. Es darf kein Level übersprungen werden.
+      Nach H2 muss immer H2 oder H3 kommen, keine H4 oder H5.
+  level:
+    label: false
+    type: toggles
+    empty: false
+    default: "h2"
+    labels: false
+    width: 4/12
+    required: true
+    options:
+      - value: h1
+        icon: h1
+        text: H1
+      - value: h2
+        icon: h2
+        text: H2
+      - value: h3
+        icon: h3
+        text: H3
+      - value: h4
+        icon: h4
+        text: H4
+      - value: h5
+        icon: h5
+        text: H5

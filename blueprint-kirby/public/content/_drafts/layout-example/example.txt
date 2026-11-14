@@ -1,0 +1,107 @@
+Title: Layout Example
+
+----
+
+Prose:
+
+[
+    {
+        "content": {
+            "heading": "Layout-Beispiel",
+            "level": "h1"
+        },
+        "id": "39121bf3-acb9-4a8c-bdc1-b0384e2495d2",
+        "isHidden": false,
+        "type": "heading"
+    },
+    {
+        "content": {
+            "text": "<p>Diese Seite zeigt alle verfügbaren Blöcke und Textauszeichnungen auf einen Blick. Sie dient als Referenz für Typografie, Abstände und das Zusammenspiel der Elemente. Der Inhalt ist <em>reiner Beispieltext</em> und hat keine weitere Bedeutung.</p><h2>Eine Überschrift der zweiten Ebene</h2><p>Ein Absatz sollte so lang sein, dass man den Zeilenfall gut beurteilen kann. Deshalb steht hier etwas mehr Text: Gute Lesbarkeit entsteht aus einer passenden Schriftgröße, ausreichendem Zeilenabstand und einer Zeilenlänge von etwa 60 bis 80 Zeichen. Wird die Zeile zu lang, verliert das Auge beim Sprung zurück an den Anfang leicht den Anschluss.</p><ol><li><p><strong>Erster Punkt:</strong> Nummerierte Listen eignen sich für Abläufe, bei denen die Reihenfolge eine Rolle spielt.</p></li><li><p><strong>Zweiter Punkt:</strong> Auch längere Listeneinträge sollten sauber umbrechen und am Text ausgerichtet bleiben, nicht an der Ziffer davor.</p></li><li><p><strong>Dritter Punkt:</strong> Ein kurzer Eintrag zum Vergleich.</p></li></ol><h2>Weitere <em>Auszeichnungen</em> im Fließtext</h2><p>Im Fließtext lassen sich Wörter <strong>fett</strong> oder <em>kursiv</em> hervorheben. Ein <a href=\"/@/page/raersmrm8ayqgmrf\">interner Link</a> führt auf eine andere Seite der Website.</p><h3>Eine Überschrift der dritten Ebene</h3><ul><li><p>Ungeordnete Listen fassen gleichwertige Punkte zusammen</p></li><li><p>Ein Eintrag mit einem <a href=\"/@/page/raersmrm8ayqgmrf\">Link</a> darin</p></li><li><p><strong>Hervorgehobener Begriff:</strong> gefolgt von einer kurzen Erläuterung</p></li></ul><h4>Eine Überschrift der vierten Ebene</h4><p>Ein abschließender kurzer Absatz unter einer kleineren Überschrift.</p>"
+        },
+        "id": "c459edd8-4cae-4ac4-a173-336628cf3f3a",
+        "isHidden": false,
+        "type": "text"
+    },
+    {
+        "content": [],
+        "id": "9a3ca680-c4a9-4504-8c61-b0a622693c6a",
+        "isHidden": false,
+        "type": "line"
+    },
+    {
+        "content": {
+            "text": "Ein Zitat hebt eine einzelne Aussage aus dem Text hervor. Es darf ruhig über mehrere Zeilen laufen, damit man sieht, wie längere Zitate umbrechen.",
+            "citation": "Vorname Nachname, Funktion"
+        },
+        "id": "d39380e6-de70-492a-8307-9bd87912cb61",
+        "isHidden": false,
+        "type": "quote"
+    },
+    {
+        "content": {
+            "text": "Beispiel-Link",
+            "link": "page://raersmrm8ayqgmrf",
+            "target": false
+        },
+        "id": "6d0de8fc-b35d-4b1a-b513-55fd9602331e",
+        "isHidden": false,
+        "type": "button"
+    },
+    {
+        "content": {
+            "size": "xxlarge"
+        },
+        "id": "6f940ed8-684a-487a-9bdd-db216b02fc72",
+        "isHidden": false,
+        "type": "space"
+    },
+    {
+        "content": {
+            "image": [
+                "file://tazlfjogizrkobvc"
+            ],
+            "ratio": "16/9",
+            "alt": "Sonnenaufgang über einem Wolkenmeer, dahinter Bergkuppen, im Vordergrund die Silhouetten dunkler Nadelbäume",
+            "caption": "Sonnenaufgang über den Wolken."
+        },
+        "id": "bb5283cb-8686-4bfb-b7dd-eb9f3798bc7f",
+        "isHidden": false,
+        "type": "image"
+    },
+    {
+        "content": {
+            "images": [
+                {
+                    "image": [
+                        "file://hhmmacfmmlu0z6vq"
+                    ],
+                    "alt": "Kanal in einer Altstadt im Morgenlicht, gesäumt von historischen Häusern, mit einer steinernen Bogenbrücke und einem Turm im Hintergrund",
+                    "caption": "Morgenstimmung am Kanal."
+                },
+                {
+                    "image": [
+                        "file://hejpvc9p9yqhkyln"
+                    ],
+                    "alt": "Ein Spatz sitzt auf einer bemoosten Mauer und blickt in die Kamera",
+                    "caption": "Neugieriger Spatz."
+                }
+            ],
+            "ratio": "3/2"
+        },
+        "id": "710249ba-c882-463c-a832-15b57757e6d3",
+        "isHidden": false,
+        "type": "gallery"
+    }
+]
+
+----
+
+Metaimage: 
+
+----
+
+Metadescription: Beispielseite mit allen verfügbaren Inhaltsblöcken: Überschriften, Fließtext, Listen, Link, Zitat, Trennlinie, Abstand, Bild und Galerie.
+
+----
+
+Uuid: a9y2ioek8zdimetb

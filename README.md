@@ -1,5 +1,5 @@
 # Design Guidelines
-Version 1.8.0
+Version 1.9.0
 
 ## Table of Contents
 
@@ -95,18 +95,18 @@ Compilation is done by `npm run` command ([npm scripts](https://docs.npmjs.com/c
 
 The following scripts/commands should be available in every project:
 
-- `npm run js`  
-		Compiles JavaScript to work in all browsers to be supported. The JavaScript is minified. Source maps are created.  
+- `npm run build`  
+		Compiles JavaScript and CSS.  
 	
 		```json
-		"js": "npx webpack --config webpack.config.js",
+		"build": "node ./develop/build.mjs",
 		```
 		
-- `npm run js-dev`  
-		Compiles JavaScript and activates a watcher. The JavaScript is recompiled when a relevant file changes. The JavaScript supports only the browsers used by the developer. It is not minified to facilitate debugging and to reduce compilation time. Source maps are created.  
+- `npm run dev`  
+		Starts a watcher and compiles JavaScript and CSS.  
 	
 		```json
-		"js": "npx webpack --config webpack.config.dev.js",
+		"dev": "node ./develop/build.mjs --dev",
 		```
 	
 - `npm run js-lint`  
@@ -115,28 +115,8 @@ The following scripts/commands should be available in every project:
 		```json
 		"js-lint": "npx eslint --fix develop/js",
 		```
-	
-- `npm run css`  
-		Compiles and minifies SASS. Source maps are created.  
-	
-		```json
-		"css": "npx sass --style=compressed --embed-sources develop/css:public/assets/css",
-		```
-	
-- `npm run css-dev`  
-		Compiles SASS and starts a watcher. The CSS files are not minified. Source maps are created.  
-	
-		```json
-		"css-dev": "npx sass --watch --embed-sources develop/css:public/assets/css",
-		```
-	
-- `npm run build`  
-		Compiles JavaScript and SASS.  
-	
-		```json
-		"build": "npm run css; npm run js-lint; npm run js;"
-		```
 
+`build.mjs` uses [esbuild](https://esbuild.github.io).
 
 ## Folder structure
 
@@ -145,9 +125,9 @@ The following scripts/commands should be available in every project:
 		- `js`
 			- `components`
 				- `a-*.js`
-				- `t-*.js`
 				- `m-*.js`
 				- `o-*.js`
+				- `t-*.js`
 			- `foundation`
 				- `*.js`
 			- `libraries`
@@ -157,9 +137,9 @@ The following scripts/commands should be available in every project:
 		- `css`
 			- `components`
 				- `a-*.css`
-				- `t-*.css`
 				- `m-*.css`
 				- `o-*.css`
+				- `t-*.css`
 			- `foundation`
 				- `colors.css`
 				- `reset.css`
@@ -178,13 +158,14 @@ The following scripts/commands should be available in every project:
 			- `fonts`
 				- `*.woff2`
 			- `images`
-				- `apple-touch-icon.png`
-				- `favicon.png`
-				- `*.webp`
+				- `*.jpg`
+				- `*.png`
 				- `*.svg`
 			- `js`
 				- `index.js`
 				- `*.js`
+		- `apple-touch-icon.png`
+		- `favicon.ico`
 		- `index.[html|php]`
 	- `.babelrc`
 	- `.browserslistrc`

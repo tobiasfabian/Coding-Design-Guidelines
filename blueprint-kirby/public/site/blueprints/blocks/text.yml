@@ -1,0 +1,9 @@
+name: field.blocks.text.name
+icon: text
+wysiwyg: true
+preview: fields
+fields:
+  text:
+    label: false
+    extends: fields/writer
+    autofocus: true

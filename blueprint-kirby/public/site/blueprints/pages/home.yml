@@ -1,0 +1,4 @@
+extends: pages/default
+icon: home
+image:
+  back: blue-900

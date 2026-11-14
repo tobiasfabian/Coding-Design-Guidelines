@@ -1,6 +1,9 @@
 <?php
+/** @var Stringable */
 $href ??= null;
+/** @var Stringable */
 $target ??= null;
+/** @var Stringable */
 $text ??= null;
 $attr ??= [];
 

@@ -15,7 +15,9 @@
 /* Atoms */
 @import 'components/a-button.css';
 @import 'components/a-heading.css';
+@import 'components/a-hr.css';
 @import 'components/a-label.css';
+@import 'components/a-space.css';
 @import 'components/a-heading.css';
 /* @import 'components/a-hr.css'; */
 /* @import 'components/a-icon.css'; */
@@ -24,13 +26,15 @@
 @import 'components/a-visually-hidden.css';
 
 /* Molecules */
+@import 'components/m-nav-primary.css';
 @import 'components/m-stack.css';
 @import 'components/m-text.css';
 /* @import 'components/m-teaser.css'; */
 
 /* Organisms */
-@import 'components/o-article.css';
 @import 'components/o-footer.css';
+@import 'components/o-header.css';
+@import 'components/o-main.css';
 /* @import 'components/o-nav-main.css'; */
 
 /* Templates */

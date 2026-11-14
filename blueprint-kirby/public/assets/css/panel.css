@@ -1,0 +1,7 @@
+.k-block-type-image .k-column:has(.k-field-type-filepicker) {
+	grid-row-end: span 4;
+}
+
+.k-block-options .k-button:has([data-type="edit"]) {
+	display: none;
+}

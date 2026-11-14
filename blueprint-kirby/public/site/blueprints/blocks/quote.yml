@@ -1,0 +1,18 @@
+name: field.blocks.quote.name
+icon: quote
+label: "{{ citation }}"
+wysiwyg: true
+preview: fields
+fields:
+  text:
+    label: false
+    placeholder: field.blocks.quote.text.placeholder
+    type: writer
+    inline: true
+    icon: quote
+  citation:
+    label: field.blocks.quote.citation.label
+    placeholder: field.blocks.quote.citation.placeholder
+    type: writer
+    inline: true
+    icon: user

@@ -1,10 +1,21 @@
 type: blocks
 pretty: true
 fieldsets:
-  - text
-  - button
-  - cite
-  - video
-  - image
-  - gallery
-  - line
+  text:
+    type: group
+    fieldsets:
+      - heading
+      - text
+      - button
+      - quote
+  media:
+    type: group
+    fieldsets:
+      - video
+      - image
+      - gallery
+  separation:
+    type: group
+    fieldsets:
+      - line
+      - space

@@ -1,9 +1,10 @@
-label: Alt-Text
-type: textarea
+label: Alternativtext
+extends: fields/writer-inline
+marks: false
 buttons: false
+icon: title
 validate:
   max: 500
 help: |
-  Beschreibt kurz das Bild. Wichtig für Blinde, aber auch für Suchmaschinen.
-  „Wie würde ich jemandem am Telefon das Bild beschreiben?“
+  Beschreibt kurz das Bild. Wichtig für Blinde, aber auch für Suchmaschinen. „Wie würde ich jemandem am Telefon dieses Bild beschreiben?“
   [Weitere Informationen (dbsv.org)](https://www.dbsv.org/bildbeschreibung-4-regeln.html#4-regeln-direkt)

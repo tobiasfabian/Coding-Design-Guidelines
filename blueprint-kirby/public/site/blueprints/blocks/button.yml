@@ -1,16 +1,22 @@
 name: Link
 icon: url
 label: "{{ text }}"
+wysiwyg: true
+preview: fields
 fields:
   text:
+    label: false
+    autofocus: true
     type: text
     required: true
   link:
     type: link
     required: true
+    width: 2/3
   target:
     label: open.newWindow
     type: toggle
     text:
       - "no"
       - "yes"
+    width: 1/3

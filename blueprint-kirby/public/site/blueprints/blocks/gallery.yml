@@ -1,19 +1,26 @@
 name: field.blocks.gallery.name
 icon: dashboard
-preview: gallery
+wysiwyg: true
+preview: fields
 fields:
   images:
-    label: field.blocks.gallery.images.label
-    type: files
-    query: model.images
-    multiple: true
-    layout: cards
-    size: small
-    empty: field.blocks.gallery.images.empty
-    uploads:
-      template: blocks/image
-    image:
-      ratio: 3/2
+    type: structure
+    fields:
+      image:
+        label: field.blocks.image.name
+        type: files
+        query: model.images
+        multiple: false
+        layout: cards
+        size: small
+        image:
+          ratio: 3/2
+      alt:
+        extends: fields/alt
+      caption:
+        extends: fields/writer-inline
+        label: field.blocks.image.caption
+        icon: text
   ratio:
     extends: fields/ratio
     width: 1/2

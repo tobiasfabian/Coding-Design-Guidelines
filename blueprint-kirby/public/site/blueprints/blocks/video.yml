@@ -1,0 +1,49 @@
+name: field.blocks.video.name
+icon: video
+label: "{{ caption }}"
+preview: fields
+wysiwyg: true
+fields:
+  video:
+    label: field.blocks.video.name
+    type: files
+    query: model.videos
+    multiple: false
+  poster:
+    label: field.blocks.video.poster
+    type: files
+    query: model.images
+    multiple: false
+    image:
+      back: black
+  caption:
+    label: field.blocks.video.caption
+    type: writer
+    inline: true
+  autoplay:
+    label: field.blocks.video.autoplay
+    type: toggle
+    width: 1/3
+  muted:
+    label: field.blocks.video.muted
+    type: toggle
+    width: 1/3
+    default: true
+  loop:
+    label: field.blocks.video.loop
+    type: toggle
+    width: 1/3
+  controls:
+    label: field.blocks.video.controls
+    type: toggle
+    width: 1/3
+    default: true
+  preload:
+    label: field.blocks.video.preload
+    type: select
+    width: 2/3
+    default: auto
+    options:
+      - auto
+      - metadata
+      - none

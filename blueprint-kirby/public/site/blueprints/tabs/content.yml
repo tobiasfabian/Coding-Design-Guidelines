@@ -1,7 +1,10 @@
 label: Inhalt
 icon: page
-sections:
-  fields:
-    fields:
-      text:
-        extends: fields/blocks
+fields:
+  prose:
+    extends: fields/blocks
+    default:
+      - type: heading
+        content:
+          level: h1
+          heading:

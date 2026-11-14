@@ -1,0 +1,4 @@
+extends: pages/default
+icon: remove
+image:
+  back: red-900

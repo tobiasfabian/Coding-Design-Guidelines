@@ -1,0 +1,8 @@
+name: field.blocks.heading.name
+icon: title
+label: "{{ heading }}"
+wysiwyg: true
+preview: fields
+fields:
+  heading:
+    extends: fields/heading

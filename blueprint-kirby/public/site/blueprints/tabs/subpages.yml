@@ -1,6 +1,6 @@
 label: Unterseiten
 icon: list-bullet
-sections:
+fields:
   pages:
     label: Unterseiten
-    type: pages
+    type: pagelist

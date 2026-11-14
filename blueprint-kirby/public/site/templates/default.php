@@ -4,8 +4,8 @@
 <?php snippet('head'); ?>
 <body class="t-default">
 	<?php snippet('o-header') ?>
-	<main>
-		<h1><?= $page->title() ?></h1>
+	<main class="o-main">
+		<?= $page->prose()->toBlocks() ?>
 	</main>
 	<?php snippet('o-footer') ?>
 	<?php snippet('pre-foot') ?>

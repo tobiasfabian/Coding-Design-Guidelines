@@ -1,13 +1,10 @@
 label: Meta
 icon: search
-sections:
-  metaFields:
-    type: fields
-    fields:
-      metaImage:
-        extends: fields/image
-        image:
-          ratio: 120/63
-          cover: true
-      metaDescription:
-        extends: fields/meta-description
+fields:
+  metaImage:
+    extends: fields/image
+    image:
+      ratio: 120/63
+      cover: true
+  metaDescription:
+    extends: fields/meta-description

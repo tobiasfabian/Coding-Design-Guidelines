@@ -1,6 +1,8 @@
 label: Dateien
 icon: file
-sections:
+fields:
   files:
     label: Dateien
-    type: files
+    type: filelist
+    search: true
+    batch: true

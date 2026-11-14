@@ -4,7 +4,8 @@
 	"description": "*",
 	"scripts": {
 		"build": "node ./develop/build.mjs;",
-		"dev": "node ./develop/build.mjs --dev;"
+    "dev": "node ./develop/build.mjs --dev;",
+    "js-lint": "eslint --fix develop/js"
 	},
 	"author": "hello@tobiaswolf.me",
 	"devDependencies": {
@@ -13,5 +14,12 @@
 		"esbuild": "0.28.1",
 		"eslint": "^10.12.0",
 		"globals": "^17.13.0"
-	}
+	},
+  "config": {
+    "localDevServer": {
+      "domain": "blueprint.test",
+      "docroot": "public",
+      "php": "8.5"
+    }
+  }
 }

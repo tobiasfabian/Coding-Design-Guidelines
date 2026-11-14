@@ -1,0 +1,21 @@
+.o-main {
+	display: grid;
+	justify-items: start;
+	grid-template-columns:
+		[full-start]
+		1fr
+		[breakout-start]
+		var(--padding-inline-body)
+		[center-start]
+		min(calc(100% - var(--padding-inline-body) * 2), var(--max-width-content))
+		[center-end]
+		var(--padding-inline-body)
+		[breakout-end]
+		1fr
+		[full-end]
+	;
+
+	> * {
+		grid-column-start: center-start;
+	}
+}

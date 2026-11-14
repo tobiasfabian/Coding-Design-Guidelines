@@ -1,0 +1,6 @@
+.o-header {
+	margin-inline: auto;
+	max-inline-size: var(--max-width-content);
+	inline-size: 100%;
+	padding-inline: var(--padding-inline-body);
+}
